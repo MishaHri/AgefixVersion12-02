@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href ="style.css">
+  <script src="https://kit.fontawesome.com/1f6873ff8c.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.cdnfonts.com/css/futura-medium" rel="stylesheet">
+  <style>
+
+
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: Futura-Light,sans-serif;
+    box-sizing: border-box;
+  }
+
+  body{
+    color:#333333;
+    /* background: url(images/sustainabableblog.png)no-repeat center center fixed; */
+    background-color:rgb(240, 234, 225);;
+  }
+
+  .blogtext{
+    margin-top: 140px;
+    padding: 30px;
+    background-color: rgba(242, 238, 238, 0.50);
+    /* background: url(images/Wateroblog.png)no-repeat center center fixed; */
+  }
+
+  .blogtext h1{
+    text-align: center;
+  }
+
+
+.thankyou{
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.thankyou a{
+text-decoration: none;
+color: white;
+height:50px;
+}
+
+
+
+  </style>
+
+
+</head>
+
+<body>
+  <nav>
+    <div class = "logo">
+    <a href="index.html"><img src="images/logotransparency.png" class ='logo'></a>
+    </div>
+    <div class = "menu">
+    <ul id = "sidemenu">
+      <li><a href="index.html">Home</a></li>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Treatments</button>
+        <div id="myDropdown" class="dropdown-content">
+          <li><a href="face.html">FaceFix </a></li>
+          <li><a href="body.html">BodyFix</a><li>
+          <li><a href="hair.html">HairFix</a><li>
+        </div>
+      </div>
+
+      <li><a href="academy.html">Academy</a></li>
+      <li><a href="contactform.html">Contact</a></li>
+      <li><a href="policy.html">Terms and Conditions</a></li>
+      <li><a href = "booking.html" class = "btnnav">Book</a></li>
+      <br>
+      <br>
+      <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+    </ul>
+    <i class="fa-solid fa-bars" onclick ="openmenu()"></i>
+   </div>
+  </nav>
+<div class = "header">
+  </div>
+  <div class = "blogtext">
+    <h1>Embracing a Sustainable Lifestyle: The AgeFix Commitment</h1>
+    <br>  <br>
+<p>At AgeFix, we believe that a sustainable lifestyle is integral to not only our well-being but also the health of our planet. Our commitment goes beyond providing exceptional anti-wrinkle treatments and skin boosters; we advocate for a way of life that respects and protects our environment.
+  Sustainable Living for Healthier Skin and Planet A sustainable lifestyle involves making choices that minimize our environmental impact.</p>
+<br>
+  <h3> Here’s how it intertwines with skin health:</h3>
+  <br>
+<ul>
+<li>Clean Beauty Practices: Opt for skincare products that are ethically sourced and made with natural, cruelty-free ingredients. These products are not only better for the environment but also gentler and more nourishing for your skin.<br></li>
+<li>Reduce, Reuse, Recycle: Minimize waste by choosing reusable and recyclable products. Reducing our carbon footprint can lead to a healthier environment and, in turn, healthier skin.</li>
+<li>Conscious Consumption: Choose products with minimal packaging and eco-friendly materials. Support brands that prioritize sustainability in their practices.</li>
+</ul>
+<br>
+<h3>
+
+ Sustainable Habits for Daily Life Incorporating sustainability into your daily routine can be simple and impactful.
+ <br>Here are some ways to start:</h3>
+<ul>
+<li>Use eco-friendly, reusable bags, water bottles, and containers.</li>
+<li>Opt for public transport, cycling, or walking to reduce carbon emissions.</li>
+<li>Conserve water and energy in your daily activities.</li>
+</ul>
+<br>
+<br>
+
+<p>AgeFix’s Role in Sustainability At AgeFix, we are dedicated to sustainability in our operations and treatments. We choose products and practices that align with our eco-friendly philosophy, ensuring that our services not only benefit you but also the environment.
+  A sustainable lifestyle is a journey of mindful choices that lead to a healthier skin and a healthier planet.
+  <br>
+  We invite you to join AgeFix in making a positive impact on the world while pursuing your skin health goals.
+</p>
+<div class = "thankyou">
+  <br>  <br>  <br>
+  <h2>Sincerely,<br>
+    AgeFix</h2>
+    <br>
+    <a href="index.html"><i class="fa-solid fa-backward"></i>    Back</a>
+  </div>
+</div>
+<script>
+  window.onscroll =function(){myFunction()};
+  var navbar = document.getElementsByClassName("nav");
+  var sticky =navbar.offsetTop;
+  function myFunction(){
+    if (window.pageYOffset >= sticky){
+      navbar.classList.add("sticky")
+    }else{
+      navbar.classList.remove("sticky")
+    }
+  }
+
+  window.addEventListener("scroll", function() {
+var dropdownContent = document.getElementById("sidemenu");
+if (dropdownContent.classList.contains('show')) {
+  dropdownContent.classList.remove("show");
+}
+});
+
+  var tablinks=document.getElementsByClassName("tab-links");
+  var tabcontents=document.getElementsByClassName("tab-contents");
+  function opentab(tabname) {
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+    }
+var sidemenu = document.getElementById("sidemenu");
+function openmenu (){
+  sidemenu.style.right ="0px";
+}
+function closemenu (){
+  sidemenu.style.right ="-200px";
+}
+var dropdown = document.querySelector(".dropdown");
+dropdown.addEventListener("mouseenter", function () {
+  document.getElementById("myDropdown").classList.add("show");
+});
+
+dropdown.addEventListener("mouseleave", function () {
+  document.getElementById("myDropdown").classList.remove("show");
+});
+
+</script>
+<iframe  id = "footershow"src="footer.html" width="100%" frameborder="0" scrolling="no"></iframe>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href ="style.css">
+  <script src="https://kit.fontawesome.com/1f6873ff8c.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.cdnfonts.com/css/futura-medium" rel="stylesheet">
+  <style>
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Futura-Light,sans-serif;
+  box-sizing: border-box;
+  font-weight: 1;
+}
+
+  body{
+    color:#333333;
+    background: url(images/foodgreen.png)no-repeat center center fixed;
+    background-color:rgb(240, 234, 225);
+  }
+
+
+  .blogtext{
+    padding: 30px;
+    background-color: rgba(242, 238, 238, 0.50);
+    margin-top: 239px;
+  }
+
+  .blogtext h1{
+    text-align: center;
+  }
+
+
+.thankyou{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.thankyou a{
+text-decoration: none;
+color: #333333;
+height:50px;
+}
+
+
+
+  </style>
+
+
+</head>
+
+<body>
+  <nav>
+    <div class = "logo">
+    <a href="index.html"><img src="images/logotransparency.png" class ='logo'></a>
+    </div>
+    <div class = "menu">
+    <ul id = "sidemenu">
+      <li><a href="index.html">Home</a></li>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Treatments</button>
+        <div id="myDropdown" class="dropdown-content">
+          <li><a href="face.html">FaceFix </a></li>
+          <li><a href="body.html">BodyFix</a><li>
+          <li><a href="hair.html">HairFix</a><li>
+        </div>
+      </div>
+
+      <li><a href="academy.html">Academy</a></li>
+      <li><a href="contactform.html">Contact</a></li>
+      <li><a href="policy.html">Terms and Conditions</a></li>
+      <li><a href = "booking.html" class = "btnnav">Book</a></li>
+      <br>
+      <br>
+      <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+    </ul>
+    <i class="fa-solid fa-bars" onclick ="openmenu()"></i>
+   </div>
+  </nav>
+<div class = "header">
+  </div>
+  <div class = "blogtext">
+    <h1>Eat Green: <br> Nourishing Your Skin from Within </h1>
+    <br>  <br>
+<p>At AgeFix, we understand that beautiful skin is not just about treatments and products; it's also about nourishment. That's why we advocate for "Eating Green" - a philosophy that emphasizes the importance of incorporating leafy greens and vegetables into your diet for optimal skin health.</p>
+<br>
+<p>
+  The Power of Greens for Your Skin Greens are packed with vitamins, minerals, and antioxidants that are essential for maintaining healthy skin.<br></p>
+<br>
+  <h3>Here's how they can benefit your skin:</h3>
+  <br>
+<ul>
+<li>Rich in Antioxidants: Leafy greens like spinach and kale are high in antioxidants which protect the skin from free radicals and environmental stressors, reducing signs of aging.<br></li>
+<li>Ditamin Boost: Greens are a fantastic source of Vitamins A, C, E, and K - all of which are vital for skin repair, hydration, and elasticity.</li>
+<li>Natural Detoxification: Greens aid in detoxifying the body, which in turn can lead to clearer, more radiant skin.</li>
+</ul>
+<br><p>Incorporating Greens into Your Diet Adding more greens to your diet can be simple and delicious. </p>
+<br>
+<h3>
+  AgeFix tips:</h3>
+<ul>
+<li>Add a handful of spinach or kale to your morning smoothie.</li>
+<li>Opt for salads filled with mixed greens as a nutrient-rich meal.</li>
+<li>Snack on crunchy vegetables like bell peppers and cucumbers.</li>
+<li>Experiment with green juices and smoothies as a refreshing treat.</li>
+</ul>
+<br>
+<h3>
+  The Role of Diet in Our Treatments</h3>
+<br>
+
+<p>We believe in a comprehensive approach to skincare. Alongside our anti-wrinkle treatments and skin boosters, we recommend a balanced diet rich in greens to enhance the health and appearance of your skin. Well-nourished skin not only looks better but also responds more effectively to treatments.
+  Eating green is not just a diet choice; it's a lifestyle that complements our commitment to helping you achieve radiant, healthy skin.
+  We believe in a comprehensive approach to skincare. Alongside our anti-wrinkle treatments and skin boosters, we recommend a balanced diet rich in greens to enhance the health and appearance of your skin. Well-nourished skin not only looks better but also responds more effectively to treatments.
+  Eating green is not just a diet choice; it's a lifestyle that complements our commitment to helping you achieve radiant, healthy skin.
+</p>
+<div class = "thankyou">
+  <br>  <br>  <br>
+  <h2>Sincerely,<br>
+    AgeFix</h2>
+    <br>
+    <a href="index.html"><i class="fa-solid fa-backward"></i>    Back</a>
+  </div>
+</div>
+<script>
+  window.onscroll =function(){myFunction()};
+  var navbar = document.getElementsByClassName("nav");
+  var sticky =navbar.offsetTop;
+  function myFunction(){
+    if (window.pageYOffset >= sticky){
+      navbar.classList.add("sticky")
+    }else{
+      navbar.classList.remove("sticky")
+    }
+  }
+
+  window.addEventListener("scroll", function() {
+var dropdownContent = document.getElementById("sidemenu");
+if (dropdownContent.classList.contains('show')) {
+  dropdownContent.classList.remove("show");
+}
+});
+
+  var tablinks=document.getElementsByClassName("tab-links");
+  var tabcontents=document.getElementsByClassName("tab-contents");
+  function opentab(tabname) {
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+    }
+var sidemenu = document.getElementById("sidemenu");
+function openmenu (){
+  sidemenu.style.right ="0px";
+}
+function closemenu (){
+  sidemenu.style.right ="-200px";
+}
+var dropdown = document.querySelector(".dropdown");
+dropdown.addEventListener("mouseenter", function () {
+  document.getElementById("myDropdown").classList.add("show");
+});
+
+dropdown.addEventListener("mouseleave", function () {
+  document.getElementById("myDropdown").classList.remove("show");
+});
+
+</script>
+<iframe  id = "footershow"src="footer.html" width="100%" frameborder="0" scrolling="no"></iframe>
+</body>
+</html>

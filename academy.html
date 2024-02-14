@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href ="style.css">
+  <script src="https://kit.fontawesome.com/1f6873ff8c.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <style>
+
+
+#headeracademy {
+  width: 100%;
+  text-align: left;
+  margin-top: 180px;
+}
+
+#headeracademy img{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+}
+
+
+.header-textacademy{
+  position: absolute;
+  padding: 10px;
+  bottom: 4px;
+  background:rgba(252, 251, 251, 0.2);
+  border-radius: 12px;
+  width: 50%;
+  margin-left: 15px;
+}
+
+
+.header-textacademy h1{
+font-size:80px;
+color: #a67814;
+}
+.sub-title h2{
+  color: #a67814;
+}
+
+
+    @media only screen and (max-width:650px){
+      #headeracademy {
+  margin-top: 130px;
+  height: fit-content;
+}
+
+.header-textacademy {
+  position: absolute;
+  padding: 10px;
+  background: rgba(252, 251, 251, 0.2);
+  border-radius: 12px;
+  width: 40%; /* Adjust as needed */
+  margin-left: 5%; /* Adjust as needed */
+  top: 30%; /* Add this to keep it at the top */
+  height: fit-content;
+}
+
+  .header-textacademy h1{
+    font-size: 30px;
+    color: #a67814;
+  }
+    }
+
+    </style>
+</head>
+<body>
+  <nav>
+    <div class = "logo">
+    <a href="index.html"><img src="images/logotransparency.png" class ='logo'></a>
+    </div>
+    <div class = "menu">
+    <ul id = "sidemenu">
+      <li><a href="index.html">Home</a></li>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Treatments</button>
+        <div id="myDropdown" class="dropdown-content">
+          <li><a href="face.html">FaceFix </a></li>
+          <li><a href="body.html">BodyFix</a><li>
+          <li><a href="hair.html">HairFix</a><li>
+        </div>
+      </div>
+
+      <li><a href="academy.html">Academy</a></li>
+      <li><a href="contactform.html">Contact</a></li>
+      <li><a href="policy.html">Terms and Conditions</a></li>
+      <li><a href = "booking.html" class = "btnnav">Book</a></li>
+      <br>
+      <br>
+      <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+    </ul>
+    <i class="fa-solid fa-bars" onclick ="openmenu()"></i>
+   </div>
+  </nav>
+<div id = "headeracademy">
+  <img src ="images/academyheader.png">
+   <div class = "header-textacademy">
+  <h1>AgeFix Academy</h1>
+</div>
+<div class = "punchline">
+  <h2>Secure your space now</h2>
+  <br>
+  <p>*Next availeble session starting August 2024</p>
+  <!-- <a href = "" class = "btn">Enroll Now</a> -->
+</div>
+
+<div id  = "contact">
+  <!-- <h2 class = "sub-title" color ="#a67814">Secure your space now </h2> -->
+        <div class = "contact-right">
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="d99ca4e9-37bd-4e1e-b6b7-cdb36bfd3b0c">
+            <input type ="text" name="Name" placeholder="Your Name" class = "contact-inputs"required>
+            <input type ="email" name = "email" placeholder="Your Email" class = "contact-inputs"required>
+            <input type ="PHONE NUMBER" name = "phone" placeholder="Your Phone Number" class = "contact-inputs"required>
+            <textarea name = "Message" rows ="6" placeholder="Your Message" class = "contact-inputs"></textarea>
+            <button type ="submit" class ="btnnav">Submit</button>
+          </form>
+        </div>
+        <br>
+        <br>
+</div>
+
+  <script>
+    window.onscroll =function(){myFunction()};
+    var navbar = document.getElementsByClassName("nav");
+    var sticky =navbar.offsetTop;
+    function myFunction(){
+      if (window.pageYOffset >= sticky){
+        navbar.classList.add("sticky")
+      }else{
+        navbar.classList.remove("sticky")
+      }
+    }
+
+    window.addEventListener("scroll", function() {
+  var dropdownContent = document.getElementById("sidemenu");
+  if (dropdownContent.classList.contains('show')) {
+    dropdownContent.classList.remove("show");
+  }
+});
+
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+      }
+  var sidemenu = document.getElementById("sidemenu");
+  function openmenu (){
+    sidemenu.style.right ="0px";
+  }
+  function closemenu (){
+    sidemenu.style.right ="-200px";
+  }
+  var dropdown = document.querySelector(".dropdown");
+  dropdown.addEventListener("mouseenter", function () {
+    document.getElementById("myDropdown").classList.add("show");
+  });
+
+  dropdown.addEventListener("mouseleave", function () {
+    document.getElementById("myDropdown").classList.remove("show");
+  });
+
+</script>
+  <iframe  id = "footershow"src="footer.html" width="100%" frameborder="0" scrolling="no"></iframe>
+</body>
+</html>

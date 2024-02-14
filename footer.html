@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer</title>
+  <script src="https://kit.fontawesome.com/1f6873ff8c.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href ="style.css">
+  <style>
+    #footer {
+      background: rgb(227, 227, 227);
+      padding: 10px 0;
+      position: relative;
+      margin-bottom: 0;
+      width: 100%;
+      color: #a67814;
+      text-align: center;
+    }
+
+    .h2 {
+      color: #ad8528;
+      font-weight: 20px;
+      font-size: 10px;
+    }
+
+    .h3 {
+      font-weight: 50px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .contact-left,
+    .contact-right {
+      width: 50%;
+    }
+
+    .contact-left {
+      float: left;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .contact-right {
+      margin-top: 10%;
+      justify-content: center;
+    }
+
+    .contact-right p i {
+      color: #a67814;
+      margin-right: 15px;
+      font-size: 20px;
+      justify-content: center;
+    }
+
+    .social-icons {
+      margin-bottom: 5%;
+      margin-right: 0;
+      padding: 5px;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      font-size: 20px;
+      margin-left: 10px;
+      color: #ad8528;
+      display: inline-block;
+      transition: transform 0.5s;
+    }
+
+    #footer a:hover {
+      text-decoration: none;
+      color: #ad8528;
+      transform: translateY(-5px);
+    }
+
+    .policy a{
+      text-decoration: none;
+color: #a67814;
+margin-top: 50px;
+margin-bottom: 0%;
+    }
+
+    .sub-footerbig{
+      background-color: white;
+      font-size: 15px;
+      text-align: center;
+      padding: 5px;
+    }
+
+    .sub-footerbig p {
+      color: #ad8528;
+    }
+
+
+    @media only screen and (max-width: 600px) {
+      #footer {
+        font-size: 14px;
+      }
+
+      .contact-left,
+      .contact-right {
+        float: none;
+        width: 100%;
+        text-align: center;
+      }
+
+      .social-icons {
+        object-fit: contain;
+      }
+
+      .social-icons a {
+        margin-bottom: 0;
+        margin-left: 10px;
+      }
+      .policy{
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="footer">
+    <h2>AgeFix - by appointment only</h2>
+    <div class="row">
+      <div class="contact-left">
+        <p>Adress:<br> 260 (3A) - 3rd Floor Pentoville Road, Kings Cross, London, N1 9JY</p><br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19858.623112468686!2d-0.12894220019363656!3d51.525545604505965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b41287b4d07%3A0xc1a5f6720c59ffc4!2sPentonville%20Rd%2C%20London!5e0!3m2!1sen!2suk!4v1706030333804!5m2!1sen!2suk"
+          width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="contact-right">
+        <h3>Contact:</h3>
+        <br />
+        <p>info@agefixlondon.com</p>
+        <p>07895 169 699</p>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/agefixlondon"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="policy">
+          <a href="policy.html" target="_blank">Terms & conditions</a>
+        </div>
+      </div>
+    </div>
+    <div class="sub-footerbig">
+          <img src="images/logotransparency.png" class="logo">
+          <p>@Agefix, all rights reserved</p>
+    </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href ="style.css">
+  <script src="https://kit.fontawesome.com/1f6873ff8c.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <style>
+
+
+#header{
+      position: relative;
+      width: 100%;
+      height: 650px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 1; /* Ensure a proper z-index */
+    }
+
+    #header img {
+width: 100%;
+height: 100%;
+object-fit:cover
+    }
+
+    .header-text {
+      position: absolute;
+      text-align: center;
+      top: 70%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      background:rgba(252, 251, 251, 0.5);
+      z-index: 2; /* Set a higher z-index to appear over the header */
+    }
+
+#tretment-sumary{
+  padding: 20px;
+  background-color: white;
+  color:#ad8528;
+  text-align: center;
+  border-radius: 12px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border:solid 1px #F5F5F5;
+}
+
+
+
+.column-tretment{
+border-radius: 10px;
+border:3px solid #ad8528;
+padding:30px;
+}
+
+
+.benefits ul{
+  display: inline-block;
+  color: #ad8528;
+}
+
+
+.booknow{
+color: #ad8528;
+text-align: center;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.booknow a{
+color: #ad8528;
+text-decoration: none;
+}
+
+.booknow a:hover{
+  transform: scale(1.1);
+}
+.dropdown-container {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+    }
+
+    .dropdown {
+      position: relative;
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: center;
+      /* border: 1px solid grey; */
+      border-radius: 40px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0 8px 16px rgba(182, 126, 126, 0.2);
+      z-index: 1;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      padding: 20px;
+      margin-top: 0px;
+    }
+
+    .dropdown-item {
+      cursor: pointer;
+      margin-top: 0px;
+      padding: 6px;
+      background-color: white;
+    }
+
+.container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+
+.column {
+  float: center;
+  width: 50%;
+  padding: 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+    .table-container {
+      margin: 40px;
+      object-fit: center;
+    }
+
+    .table-container h2{
+     object-fit: center;
+      color: #a67814;
+      padding: 20px;
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      border: 1px solid  #F5F5F5;
+
+    }
+
+    th, td {
+      padding: 30px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    td {
+      border-left: 1px solid #F5F5F5;
+    }
+
+    th {
+      background-color: #AD8527;
+      color:  white;
+      border-left: 1px solid white;
+    }
+
+    tr:nth-child(even) {
+      background-color: whitesmoke;
+    }
+
+    tr:nth-child(odd) {
+      background-color: white;
+    }
+
+.tretment-box{
+  padding: 10px;
+}
+
+
+select {
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    .priceinfo{
+      text-align:center;
+    }
+
+@media only screen and (max-width:600px){
+
+
+.column-tretment{
+padding:10px;
+}
+
+#tretment-sumary {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .column-tretment {
+    padding: 10px;
+  }
+
+  .table-container  h2{
+margin-left: 10px;
+      font-size: 25px;
+    }
+
+    .column {
+  float: center;
+  width: 100%;
+}
+
+}
+
+    </style>
+</head>
+<body>
+  <nav>
+    <div class = "logo">
+    <a href="index.html"><img src="images/logotransparency.png" class ='logo'></a>
+    </div>
+    <div class = "menu">
+    <ul id = "sidemenu">
+      <li><a href="index.html">Home</a></li>
+      <!-- <div class="dropdown"> -->
+        <!-- <button onclick="myFunctionnav()" class="dropbtn">Treatments</button>
+        <div id="myDropdown" class="dropdown-content-treatments"> -->
+        <li><a href="face.html">FaceFix</a></li>
+        <li><a href="body.html">BodyFix</a><li>
+        <li><a href="hair.html">HairFix</a><li>
+      <li><a href="academy.html">Academy</a></li>
+      <li><a href="contactform.html">Contact</a></li>
+      <li><a href="pricelist.html">Price List</a></li>
+      <li><a href = "booking.html" class = "btnnav">Book</a></li>
+      <br>
+      <br>
+      <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+    </ul>
+    <i class="fa-solid fa-bars" onclick ="openmenu()"></i>
+   </div>
+  </nav>
+<div id ="header">
+  <img src ="images/antiwrinckle.png">
+  <div class ="header-text">
+    <h1>Profhilo &reg; </h1>
+    <h1>5 Point Face Lift</h1>
+</div>
+</div>
+
+<div class = "punchline">
+  <h2>At AgeFix, we're proud to introduce Profhilo® — an innovative approach to skin rejuvenation that aligns perfectly with our philosophy,
+    "Where Time Meets Beauty."
+    Profhilo® is not just a treatment; it's a
+    revolutionary way to enhance your skin's natural
+    firmness and hydration.
+  </h2>
+</div>
+
+
+  <div id ="tretment-sumary">
+  <h2>Treatment Sumary</h2>
+  <br>
+  <br>
+  <div class ="treatment">
+<div class = "row">
+  <div class = "column-tretment">
+    <p>Application</p>
+    <br>
+    <i class="fas fa-syringe"></i>
+  </div>
+  <div class = "column-tretment">
+    <p>Procedure <br>time</p>
+    <i class="fa-solid fa-clock"></i>
+    <p>30-45min</p>
+  </div>
+  <div class = "column-tretment">
+    <p>Recovery <br>Time</p>
+    <i class="fa-regular fa-clock"></i>
+    <br>
+    <p>0-24hours</p>
+  </div>
+  <div class = "column-tretment">
+    <p>Discomfort <br> Level</p>
+    <i class="fa-solid fa-face-smile"></i>
+    <br>
+    <p>Mild</p>
+  </div>
+  </div>
+  <div class = "benefits">
+    <br>
+  <h3>Benefits</h3>
+  <ul style="list-style-type:square">
+    <li>Enhances volume and provides a plumping and firming effect</li>
+    <li>Preserves natural muscle flexibility and movement</li>
+    <li>Elevates and evens out skin tone</li>
+    <li>Rejuvenates and brings back skin radiance</li>
+    <li>Minimizes the appearance of lines and wrinkles
+      Intensively hydrates and nourishes the skin</li>
+  </ul>
+  <br>
+  <div class = "booknow">
+  <a href = "booking.html">Book now a complimentary consultation</a>
+  </div>
+</div>
+</div>
+</div>
+
+<div class = "punchline">
+  <h2>Don t know what to expect?
+    <br> See bellow if you find answers to your questions
+    <br>If not, please do not sesitate to get in touch
+  </h3>
+  <a href = "contactform.html" class ="btnnav">Get in touch</a>
+
+</div>
+
+ <div class="dropdown-container">
+  <div class="dropdown" id="dropdown1">
+    <div class="dropdown-item"><h3>Pre-Treatment Advice:<i class="fa-solid fa-angles-down"></i></h3></div>    <div class="dropdown-content">
+     <br>
+      <div><ul>
+        <li>Avoid using topical products that contain tretinoin, retinol, retinoids, glycolic acid, or any "anti-aging" products.</li>
+        <li>Avoid alcohol and blood-thinning medications (like aspirin or ibuprofen) for at least 24 hours before the treatment to reduce the risk of bruising.</li>
+        <li>Stay hydrated, but avoid excessive liquids right before the session to reduce discomfort.</li>
+        <li>Ensure the treatment area is clean and free of makeup, creams, and lotions.</li>
+        <li>Consult with your practitioner regarding any supplements or medications you are taking, as some may need to be paused.</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="dropdown" id="dropdown2">
+    <div class="dropdown-item"><h3>Post-Treatment Care<i class="fa-solid fa-angles-down"></i></h3></div>    <div class="dropdown-content">
+      <br>
+      <div><ul>
+        <li>Avoid using topical products that contain tretinoin, retinol, retinoids, glycolic acid, or any "anti-aging" products.</li>
+        <li>Avoid touching or applying pressure to the treated area for at least 6 hours post-treatment to prevent infection and allow the product to settle.</li>
+        <li>Refrain from intense physical activity, sauna, and steam rooms for a couple of days to minimize swelling and bruising.</li>
+        <li>Avoid extreme temperatures (very cold or hot) on the treated area for a few days.</li>
+        <li>Postpone any other facial treatments for at least a week after  Profhilo®treatment.</li>
+        <li>Follow any specific aftercare instructions provided by your practitioner.</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="dropdown" id="dropdown3">
+    <div class="dropdown-item"><h3>Results<i class="fa-solid fa-angles-down"></i></h3></div>    <div class="dropdown-content">
+      <div><ul>
+        <li>Initial improvements in skin hydration and texture can be noticed within a few days.</li>
+        <li>Optimal results, including firmer, more radiant skin with reduced fine lines and wrinkles, are typically observed about a month after treatment.</li>
+        <li>The effects of  Profhilo® generally last around six months, after which a maintenance treatment may be recommended to sustain results.</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+<br><br>
+  <div class="dropdown" id="dropdown4">
+    <div class="dropdown-item"><h3>Teatment Sumary<i class="fa-solid fa-angles-down"></i></h3></div>    <div class="dropdown-content">
+      <div><ul>
+        <p>What is Profhilo®?<br>
+          Profhilo® is a cutting-edge skin bio-remodeling treatment. Unlike traditional fillers, it's a unique Hyaluronic Acid (HA) gel known for its ultrapure, bio-fermented HA. Profhilo® integrates seamlessly into your skin, improving hydration and firmness without leaving any residue.
+          <br>
+          How Does Profhilo® Address Skin Laxity and Aging?<br>
+          Profhilo® is designed to remodel tissue effectively, enhancing skin laxity on the face, neck, and body. It rejuvenates natural skin firmness, eliminates crepey skin, and hydrates from within, offering a natural-looking revitalization.
+          <br>
+          Who Benefits from Profhilo®?<br>
+          Ideal for individuals in their 30s and beyond, Profhilo® is perfect for those looking to maintain strong, healthy skin or combat the early signs of aging and skin laxity.
+          <br>Why Choose Profhilo® Over Regular Fillers?<br>
+          For those seeking a subtle, more natural rejuvenation, Profhilo® is an excellent choice. It not only enhances tissue quality but also supports underlying structures, offering a nuanced alternative to traditional fillers.
+
+          <br>What Results Can I Expect?<br>
+          A Profhilo® treatment, typically involving two to three sessions, promises gradual yet intense hydration, improved lines, and tighter skin. Peak results, revealing a lifted and more youthful appearance, occur around eight weeks, with effects lasting up to six months or more.
+
+          <br> Treatment Frequency:<br>
+          Two to three sessions spaced four weeks apart are usually recommended, with maintenance treatments every six months to sustain the results.
+
+          <br>Downtime and Results:<br>
+          Expect to see improvements starting four weeks after the first treatment, with minimal downtime. Some clients may experience slight swelling or bruising.
+
+          <br>Is Profhilo® Safe?<br>
+          Yes, Profhilo® is safe, biocompatible, and minimally invasive. Administered by our experienced practitioners, it ensures comfort with minimal side effects.
+
+          <br>Starting Your Treatment:<br>
+          After completing a medical declaration form to ensure suitability, you can begin your journey to rejuvenated skin with Profhilo®.
+
+          <br>Experience the AgeFix Difference<br>
+          Choose Profhilo® at AgeFix for a revolutionary approach to skin rejuvenation. Embrace the perfect blend of safety, effectiveness, and remarkable results. Book your consultation today and step into the world of AgeFix, where we redefine beauty across time with Profhilo®.<br>
+        </p>
+    </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+<div class="table-container">
+  <h2>5 Point Face Lift Package</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Consultation</td>
+        <td>Free*</td>
+      </tr>
+      <tr>
+        <td>1 Area Treatment</td>
+        <td>£249</td>
+      </tr>
+      <tr>
+        <td>2 Areas Treatments</td>
+        <td>£398(Save 20%)</td>
+      </tr>
+      <tr>
+        <td>3 Areas Treatment</td>
+        <td>£522(Save 30%)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="table-container">
+  <h2>PROFHILO®</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Consultation</td>
+        <td>Free*</td>
+      </tr>
+      <tr>
+        <td>2 areas(face and neck)</td>
+        <td>£448</td>
+      </tr>
+      <tr>
+        <td>3 areas(face, neck and hands)</td>
+        <td>£587</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class ="priceinfo">
+    <br>
+<p>Prices subject to change due to quantity of serum used</p>
+<p>*See Terms & conditions for more details</p>
+</div>
+
+
+<div class = "booknow">
+  <h3>Book now a complimentary consultation<h3>
+  <div class = "btnnav"><a href = "booking.html">Book now</a>
+</div>
+
+<script>
+  window.onscroll =function(){myFunctionnav()};
+  var navbar = document.getElementsByClassName("nav");
+  var sticky =navbar.offsetTop;
+  function myFunction(){
+    if (window.pageYOffset >= sticky){
+      navbar.classList.add("sticky")
+    }else{
+      navbar.classList.remove("sticky")
+    }
+  }
+
+  window.addEventListener("scroll", function() {
+var dropdownContent = document.getElementById("sidemenu");
+if (dropdownContent.classList.contains('show')) {
+  dropdownContent.classList.remove("show");
+}
+});
+
+  var tablinks=document.getElementsByClassName("tab-links");
+  var tabcontents=document.getElementsByClassName("tab-contents");
+  function opentab(tabname) {
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+    }
+var sidemenu = document.getElementById("sidemenu");
+function openmenu (){
+  sidemenu.style.right ="0px";
+}
+function closemenu (){
+  sidemenu.style.right ="-200px";
+}
+var dropdown = document.querySelector(".dropdown");
+dropdown.addEventListener("mouseenter", function () {
+  document.getElementById("myDropdown").classList.add("show");
+});
+
+dropdown.addEventListener("mouseleave", function () {
+  document.getElementById("myDropdown").classList.remove("show");
+});
+
+</script>
+
+
+<script>
+  document.addEventListener('click', function (event) {
+    // Close all dropdowns if clicked outside
+    if (!event.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown-content').forEach(function (dropdownContent) {
+        dropdownContent.style.display = 'none';
+      });
+    }
+  });
+
+  document.querySelectorAll('.dropdown').forEach(function (dropdown) {
+    dropdown.addEventListener('mouseenter', function () {
+      // Adjust the position of the next dropdown
+      const nextDropdown = this.nextElementSibling;
+      if (nextDropdown) {
+        nextDropdown.style.marginTop = this.offsetHeight + 'px';
+      }
+    });
+
+    dropdown.addEventListener('mouseleave', function () {
+      // Reset the position of the next dropdown
+      const nextDropdown = this.nextElementSibling;
+      if (nextDropdown) {
+        nextDropdown.style.marginTop = '0';
+      }
+    });
+  });
+</script>
+
+
+
+
+
+        <iframe  id = "footershow"src="footer.html" width="100%" frameborder="0" scrolling="no"></iframe>
+</body>
+</html>

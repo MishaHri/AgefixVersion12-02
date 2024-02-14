@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Form</title>
+  <link rel="stylesheet" href ="style.css">
+  <style>
+
+.punchline{
+  margin-top: 14%;
+}
+
+#contactbotox{
+  justify-content: center;
+  text-align: center;
+  padding:80px;
+  /* background: url(images/16.png)no-repeat center center fixed; */
+}
+
+#wahanda-online-booking-widget-iframe {
+  height: 800px;
+}
+
+#service{
+  padding: 10px;
+  text-align: center;
+  object-fit: content;
+  background-color: rgb(240, 234, 225);
+}
+
+
+.contact-inputs{
+  margin-top: 5px;
+}
+
+
+
+@media only screen and (max-width:600px){
+  #contactbotox{
+  padding:20px
+}
+
+.punchline{
+  margin-top: 25%;
+}
+
+#service{
+  padding: 0px;
+  border-radius: 6px;
+  background-color: rgb(240, 234, 225);
+}
+
+
+}
+    </style>
+</head>
+
+<body>
+  <nav>
+    <div class = "logo">
+    <a href="index.html"><img src="images/logotransparency.png" class ='logo'></a>
+    </div>
+   </div>
+  </nav>
+
+<div class ="punchline">
+  <h2> AgeFix</h2><br>
+<h3>*By appointment only</h3>
+</div>
+
+<div id ="contactbotox">
+  <br>
+  
+<h1>Make a booking</h1>
+<br><br>
+<script src="https://widget.treatwell.co.uk/common/venue-menu/javascript/widget-button.js?v1"></script>
+  <script>
+  (function()
+  
+  { var link = document.createElement("link"); link.type = "text/css"; link.href = "https://widget.treatwell.co.uk/common/venue-menu/css/widget-button.css"; link.rel = "stylesheet"; link.media = "screen"; document.getElementsByTagName("head")[0].appendChild(link); }
+  ());
+  </script>
+  <div
+  id="wahanda-online-booking-widget-iframe"
+  data-widget-url="https://widget.treatwell.co.uk/place/429199/menu/"
+  ></div>
+  <!-- <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="d99ca4e9-37bd-4e1e-b6b7-cdb36bfd3b0c">
+
+    <input type="text" id="name" name="name" class ="contact-inputs"placeholder="Your Full Name" required>
+    <input type="email" id="email" name="email" class ="contact-inputs" placeholder="Your Email"required>
+
+   
+    <div class = "row">
+      <div class ="date">
+    <label for="date">Select Date:</label>
+   
+<label for="date">Select Date:</label>
+<input type="date" id="date" name="date" class="contact-inputs" required
+       min="2024-01-01" max="2024-12-31" oninput="validateDay()">
+
+    </div>
+    <div class ="time">
+      <label for="time">Select Time:</label>
+    <input type="time" id="time" name="time" class="contact-inputs" required
+    min="09:00" max="18:00" step="3600">
+    </div>
+    
+    <label for="service"class ="contact-inputs">Select Service:</label>
+    <select id="service" name="service" required>
+      <option value="service1">Face: Anti-Wrinkle</option>
+      <option value="service2">Face: Profhilio</option>
+      <option value="service2">Face: Seventy hyal</option>
+    
+    </select>
+    <textarea id="comments" name="comments" rows="4" class ="contact-inputs" placeholder="Additional Comments"></textarea>
+
+    
+    <button type="submit" class = "btnnav">Submit Booking</button>
+  </form> -->
+  
+  </div>
+</div>
+  <div class ="punchline">
+    <h2>We will do our best to accomodate your request<br>
+    A member from our team will get in touch to confirm the details of the booking</h2>
+  </div>
+<script>
+  function validateDay() {
+    var selectedDate = new Date(document.getElementById('date').value);
+    var dayOfWeek = selectedDate.getDay();
+
+    if (dayOfWeek < 1 || dayOfWeek > 5) {
+      alert("Please select a date between Monday and Friday.");
+      document.getElementById('date').value = '';
+    }
+  }
+</script>
+<script>
+  window.onscroll =function(){myFunction()};
+  var navbar = document.getElementsByClassName("nav");
+  var sticky =navbar.offsetTop;
+  function myFunction(){
+    if (window.pageYOffset >= sticky){
+      navbar.classList.add("sticky")
+    }else{
+      navbar.classList.remove("sticky")
+    }
+  }
+
+  window.addEventListener("scroll", function() {
+var dropdownContent = document.getElementById("sidemenu");
+if (dropdownContent.classList.contains('show')) {
+  dropdownContent.classList.remove("show");
+}
+});
+
+  var tablinks=document.getElementsByClassName("tab-links");
+  var tabcontents=document.getElementsByClassName("tab-contents");
+  function opentab(tabname) {
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+    }
+var sidemenu = document.getElementById("sidemenu");
+function openmenu (){
+  sidemenu.style.right ="0px";
+}
+function closemenu (){
+  sidemenu.style.right ="-200px";
+}
+var dropdown = document.querySelector(".dropdown");
+dropdown.addEventListener("mouseenter", function () {
+  document.getElementById("myDropdown").classList.add("show");
+});
+
+dropdown.addEventListener("mouseleave", function () {
+  document.getElementById("myDropdown").classList.remove("show");
+});
+
+</script>
+
+<iframe  id = "footershow"src="footer.html" width="100%" frameborder="0" scrolling="no"></iframe>
+
+</body>
+
+</html>

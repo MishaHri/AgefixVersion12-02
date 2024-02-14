@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href ="style.css">
+  <script src="https://kit.fontawesome.com/1f6873ff8c.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <style>
+
+
+#header{
+      position: relative;
+      width: 100%;
+      height: 650px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 1; /* Ensure a proper z-index */
+    }
+
+    #header img {
+width: 100%;
+height: 100%;
+object-fit:cover
+    }
+
+    .header-text {
+      position: absolute;
+      text-align: center;
+      top: 70%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      background:rgba(252, 251, 251, 0.5);
+      z-index: 2; /* Set a higher z-index to appear over the header */
+    }
+
+#tretment-sumary{
+  padding: 20px;
+  background-color: white;
+  color:#ad8528;
+  text-align: center;
+  border-radius: 12px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border:solid 1px #F5F5F5;
+}
+
+
+
+.column-tretment{
+border-radius: 10px;
+border:3px solid #ad8528;
+padding:30px;
+}
+
+
+.benefits ul{
+  display: inline-block;
+  color: #ad8528;
+}
+
+
+.booknow{
+color: #ad8528;
+text-align: center;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.booknow a{
+color: #ad8528;
+text-decoration: none;
+}
+
+.booknow a:hover{
+  transform: scale(1.1);
+}
+.dropdown-container {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+    }
+
+    .dropdown {
+      position: relative;
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: center;
+      /* border: 1px solid grey; */
+      border-radius: 40px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0 8px 16px rgba(182, 126, 126, 0.2);
+      z-index: 1;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      padding: 20px;
+      margin-top: 0px;
+    }
+
+    .dropdown-item {
+      cursor: pointer;
+      margin-top: 0px;
+      padding: 6px;
+      background-color: white;
+    }
+
+.container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+
+.column {
+  float: center;
+  width: 50%;
+  padding: 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+    .table-container {
+      margin: 40px;
+      object-fit: center;
+    }
+
+    .table-container h2{
+     object-fit: center;
+      color: #a67814;
+      padding: 20px;
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      border: 1px solid  #F5F5F5;
+
+    }
+
+    th, td {
+      padding: 30px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    td {
+      border-left: 1px solid #F5F5F5;
+    }
+
+    th {
+      background-color: #AD8527;
+      color:  white;
+      border-left: 1px solid white;
+    }
+
+    tr:nth-child(even) {
+      background-color: whitesmoke;
+    }
+
+    tr:nth-child(odd) {
+      background-color: white;
+    }
+
+.tretment-box{
+  padding: 10px;
+}
+
+
+select {
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    .priceinfo{
+      text-align:center;
+    }
+
+@media only screen and (max-width:600px){
+
+
+.column-tretment{
+padding:10px;
+}
+
+#tretment-sumary {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .column-tretment {
+    padding: 10px;
+  }
+
+  .table-container  h2{
+margin-left: 10px;
+      font-size: 25px;
+    }
+
+    .column {
+  float: center;
+  width: 100%;
+}
+
+}
+
+    </style>
+</head>
+<body>
+  <nav>
+    <div class = "logo">
+    <a href="index.html"><img src="images/logotransparency.png" class ='logo'></a>
+    </div>
+    <div class = "menu">
+    <ul id = "sidemenu">
+      <li><a href="index.html">Home</a></li>
+      <!-- <div class="dropdown"> -->
+        <!-- <button onclick="myFunctionnav()" class="dropbtn">Treatments</button>
+        <div id="myDropdown" class="dropdown-content-treatments"> -->
+        <li><a href="face.html">FaceFix</a></li>
+        <li><a href="body.html">BodyFix</a><li>
+        <li><a href="hair.html">HairFix</a><li>
+      <li><a href="academy.html">Academy</a></li>
+      <li><a href="contactform.html">Contact</a></li>
+      <li><a href="pricelist.html">Price List</a></li>
+      <li><a href = "booking.html" class = "btnnav">Book</a></li>
+      <br>
+      <br>
+      <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+    </ul>
+    <i class="fa-solid fa-bars" onclick ="openmenu()"></i>
+   </div>
+  </nav>
+<div id ="header">
+  <img src ="images/antiwrinckle.png">
+  <div class ="header-text">
+  <h1>Lumi eyes by Dermaren</h1>
+  <h1>Treatment</h1>
+</div>
+</div>
+
+<div class = "punchline">
+  <h2>Lumi Eyes is a non-surgical mesotherapy procedure
+    focused on revitalizing the eye area. It employs a
+    solution rich in polynucleotides derived from salmon
+     milk DNA, renowned for its skin-regenerating properties.
+     The treatment effectively targets dark circles,
+     moisturizes, minimizes fine lines,
+    and lifts the skin under the eyes.
+  </h2>
+</div>
+
+<!--
+  <div id ="tretment-sumary">
+  <h2>Treatment Sumary</h2>
+  <br>
+  <br>
+  <div class ="treatment">
+<div class = "row">
+  <div class = "column-tretment">
+    <p>Application</p>
+    <br>
+    <i class="fas fa-syringe"></i>
+  </div>
+  <div class = "column-tretment">
+    <p>Procedure <br>time</p>
+    <i class="fa-solid fa-clock"></i>
+    <p>20 min</p>
+  </div>
+  <div class = "column-tretment">
+    <p>Recovery <br>Time</p>
+    <i class="fa-regular fa-clock"></i>
+    <br>
+    <p>5-7 days</p>
+  </div>
+  <div class = "column-tretment">
+    <p>Discomfort <br> Level</p>
+    <i class="fa-solid fa-face-smile"></i>
+  </div>
+  </div>
+  <div class = "benefits">
+    <br>
+  <h3>Benefits</h3>
+  <ul style="list-style-type:square">
+    <li>Skin Smoothing</li>
+    <li>Anti-ageing</li>
+    <li>Radiance</li>
+  </ul>
+  <br>
+  <div class = "booknow">
+  <a href = "booking.html">Book now a complimentary consultation</a>
+  </div>
+</div>
+</div>
+</div>
+
+<div class = "punchline">
+  <h2>Don t know what to expect?
+    <br> See bellow if you find answers to your questions
+    <br>If not, please do not sesitate to get in touch
+  </h3>
+  <a href = "contactform.html" class ="btnnav">Get in touch</a>
+
+</div>
+
+ <div class="dropdown-container">
+  <div class="dropdown" id="dropdown1">
+    <div class="dropdown-item"><h3>Pre-Treatment Advice:<i class="fa-solid fa-angles-down"></i></h3></div>    <div class="dropdown-content">
+     <br>
+      <div><ul>
+        <li>Avoid using topical products that contain tretinoin, retinol, retinoids, glycolic acid, or any "anti-aging" products.</li>
+        <li>Refrain from consuming alcohol or coffee 24 hours prior to the treatment.</li>
+        <li>Arrive for your appointment makeup-free, if possible, to facilitate a clean and efficient treatment process.</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="dropdown" id="dropdown2">
+    <div class="dropdown-item"><h3>Post-Treatment Care<i class="fa-solid fa-angles-down"></i></h3></div>    <div class="dropdown-content">
+      <br>
+      <div><ul>
+        <li>Bruising and Swelling: Be prepared for potential bruising or swelling at the injection sites. This is a common reaction and usually subsides quickly</li>
+        <li>Stay Upright: Maintain an upright position and avoid bending over for at least 4 hours following the treatment.</li>
+        <li>Alcohol Consumption: Abstain from alcohol for 24 hours before and after your treatment to minimize bruising and swelling.</li>
+        <li>Avoid Heat: Steer clear of sun exposure, tanning beds, saunas, and hot tubs to ensure optimal healing.</li>
+        <li>Exercise: Hold off on intense physical workouts for up to 48 hours post-treatment.</li>
+        <li>Results Timeline: Anticipate experiencing the full results within up to 14 days after the treatment.</li>
+        <li>Communication: If you have any concerns or unusual reactions, reach out to the clinic for guidance.</li>
+        <li>Avoid using topical products that contain tretinoin, retinol, retinoids, glycolic acid, or any "anti-aging" products.</li>
+        <li>Arnica cream may be applied to bruises, and paracetamol is recommended for any discomfort.</li>
+        <li>Follow-Up: Consider scheduling a follow-up appointment in 2 weeks for a potential top-up, if needed.</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="dropdown" id="dropdown3">
+    <div class="dropdown-item"><h3>Results<i class="fa-solid fa-angles-down"></i></h3></div>    <div class="dropdown-content">
+      <div><ul>
+        <li>You can expect to see results within a few days, but it may take up to two weeks for the full effect.</li>
+        <li>The results typically last between 3-5 months. Repeated treatments are necessary for maintaining the effects.</li>
+        <li>Some patients report minor bruising or swelling at the injection site, but these side effects are usually temporary.</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+<br><br>
+  <div class="dropdown" id="dropdown4">
+    <div class="dropdown-item"><h3>CONTRAINDICATION<i class="fa-solid fa-angles-down"></i></h3></div>    <div class="dropdown-content">
+      <div><ul>
+        <li>Allergy to botulinum toxin or any component of the formulation.
+          Infection at the injection site.</li>
+        <li>Neuromuscular disorders (e.g., myasthenia gravis, Lambert-Eaton syndrome).</li>
+        <li>Pregnancy and breastfeeding.</li>
+        <li>Certain medications (like aminoglycoside antibiotics) that can interact with the treatment.</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class = "punchline">
+  <h2>AgeFix Anti-Wrinkle Treatments</h2>
+  <br>
+  <h3>Price range</h3>
+</div>
+
+
+<div class="container">
+<div class="row">
+  <div class="column">
+  <div class="table-container">
+    <h2>Female</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Consultation</td>
+          <td>Free*</td>
+        </tr>
+        <tr>
+          <td>1 Area Treatment</td>
+          <td>£139</td>
+        </tr>
+        <tr>
+          <td>2 Areas Treatment</td>
+          <td>£189</td>
+        </tr>
+        <tr>
+          <td>3 Areas Treatment</td>
+          <td>£249</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <div class="column">
+
+  <div class="table-container">
+    <h2>Male</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Consultation</td>
+          <td>Free*</td>
+        </tr>
+        <tr>
+          <td>1 Area Treatment</td>
+          <td>£169</td>
+        </tr>
+        <tr>
+          <td>2 Areas Treatment</td>
+          <td>£219</td>
+        </tr>
+        <tr>
+          <td>3 Areas Treatment</td>
+          <td>£279</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+
+
+</div>
+</div>
+
+
+<div class ="priceinfo">
+<p>Prices subject to change due to quantity of serum used</p>
+<p>*See Terms & conditions for more details</p>
+</div>
+
+
+<div class = "booknow">
+  <h3>Book now a complimentary consultation<h3>
+  <div class = "btnnav"><a href = "booking.html">Book now</a>
+</div>
+
+
+<div class ="photo-areas">
+  <img src ="images/Botoxareas.png">
+</div>
+
+
+<script>
+  window.onscroll =function(){myFunctionnav()};
+  var navbar = document.getElementsByClassName("nav");
+  var sticky =navbar.offsetTop;
+  function myFunction(){
+    if (window.pageYOffset >= sticky){
+      navbar.classList.add("sticky")
+    }else{
+      navbar.classList.remove("sticky")
+    }
+  }
+
+  window.addEventListener("scroll", function() {
+var dropdownContent = document.getElementById("sidemenu");
+if (dropdownContent.classList.contains('show')) {
+  dropdownContent.classList.remove("show");
+}
+});
+
+  var tablinks=document.getElementsByClassName("tab-links");
+  var tabcontents=document.getElementsByClassName("tab-contents");
+  function opentab(tabname) {
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+    }
+var sidemenu = document.getElementById("sidemenu");
+function openmenu (){
+  sidemenu.style.right ="0px";
+}
+function closemenu (){
+  sidemenu.style.right ="-200px";
+}
+var dropdown = document.querySelector(".dropdown");
+dropdown.addEventListener("mouseenter", function () {
+  document.getElementById("myDropdown").classList.add("show");
+});
+
+dropdown.addEventListener("mouseleave", function () {
+  document.getElementById("myDropdown").classList.remove("show");
+});
+
+</script>
+
+
+<script>
+  document.addEventListener('click', function (event) {
+    // Close all dropdowns if clicked outside
+    if (!event.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown-content').forEach(function (dropdownContent) {
+        dropdownContent.style.display = 'none';
+      });
+    }
+  });
+
+  document.querySelectorAll('.dropdown').forEach(function (dropdown) {
+    dropdown.addEventListener('mouseenter', function () {
+      // Adjust the position of the next dropdown
+      const nextDropdown = this.nextElementSibling;
+      if (nextDropdown) {
+        nextDropdown.style.marginTop = this.offsetHeight + 'px';
+      }
+    });
+
+    dropdown.addEventListener('mouseleave', function () {
+      // Reset the position of the next dropdown
+      const nextDropdown = this.nextElementSibling;
+      if (nextDropdown) {
+        nextDropdown.style.marginTop = '0';
+      }
+    });
+  });
+</script>
+
+
+
+
+
+        <iframe  id = "footershow"src="footer.html" width="100%" frameborder="0" scrolling="no"></iframe>
+</body>
+</html>

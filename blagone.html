@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href ="style.css">
+
+  <script src="https://kit.fontawesome.com/1f6873ff8c.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.cdnfonts.com/css/futura-medium" rel="stylesheet">
+  <style>
+
+
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: Futura-Light,sans-serif;
+    box-sizing: border-box;
+  }
+
+  body{
+    color:#333333;
+    /* background: url(images/Wateroblog.png)no-repeat center center fixed;
+    margin: 0; */
+    
+    background: url(images/Wateroblog.png)no-repeat center center fixed;
+    background-color:rgb(240, 234, 225);
+  }
+
+  .blogtext{
+    margin-top: 239px;
+    background-color: rgba(242, 238, 238, 0.25);
+    padding: 30px;
+    /* background: url(images/Wateroblog.png)no-repeat center center fixed; */
+  }
+
+  .blogtext h1{
+    text-align: center;
+  }
+
+
+.thankyou{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.thankyou a{
+text-decoration: none;
+color: #333333;
+height:50px;
+}
+
+
+
+  </style>
+
+
+</head>
+
+<body>
+  <nav>
+    <div class = "logo">
+    <a href="index.html"><img src="images/logotransparency.png" class ='logo'></a>
+    </div>
+    <div class = "menu">
+    <ul id = "sidemenu">
+      <li><a href="index.html">Home</a></li>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Treatments</button>
+        <div id="myDropdown" class="dropdown-content">
+          <li><a href="face.html">FaceFix </a></li>
+          <li><a href="body.html">BodyFix</a><li>
+          <li><a href="hair.html">HairFix</a><li>
+        </div>
+      </div>
+
+      <li><a href="academy.html">Academy</a></li>
+      <li><a href="contactform.html">Contact</a></li>
+      <li><a href="policy.html">Terms and Conditions</a></li>
+      <li><a href = "booking.html" class = "btnnav">Book</a></li>
+      <br>
+      <br>
+      <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+    </ul>
+    <i class="fa-solid fa-bars" onclick ="openmenu()"></i>
+   </div>
+  </nav>
+<div class = "blogtext">
+  <h1>Water Miracles:<br> Unlocking the Secret to Radiant Skin</h1>
+  <br>
+<p>At AgeFix, our passion extends beyond providing top-tier anti-wrinkle treatments and skin boosters. We believe in a holistic approach to skin health, and one key aspect of this is hydration. Water is the foundation of life, and its benefits for your skin are nothing short of miraculous.</p>
+<br>
+<h3>Hydration:
+The Elixir of Youthful Skin</h3>
+<br>
+<p>
+Water makes up about 60% of your body and plays a pivotal role in maintaining skin elasticity and suppleness.<br>
+Proper hydration helps to:</p>
+<ul>
+<li>Plump and Smooth Skin:<br>
+Dehydration can lead to dull, tired-looking skin. Drinking adequate water can maintain skin’s fullness and ward off signs of aging.</li>
+<li>Detoxify and Cleanse: Water helps to flush out toxins from your body. This natural detox process is crucial in achieving clear, glowing skin</li>
+<li>Boost Skin Repair: Hydration aids in the skin's healing and regeneration processes. It supports the effectiveness of topical treatments and procedures, enhancing overall skin health.</li>
+<li>Daily Water Intake: Your Personal Skin Regimen</li>
+</ul>
+<br>
+<h3>How much water should you drink?</h3>
+<br><p>While needs vary, aiming for at least 8 glasses a day is a good start.
+   Remember, fruits and vegetables are also great hydration sources.
+   Infusing water with natural ingredients like cucumber, lemon,
+   or berries can add nutritional benefits and make hydration more enjoyable.</p>
+<br>
+<h3>Lifestyle Integration:
+Hydration Beyond Drinking Water</h3>
+<br>
+
+<p>Hydration isn't just about drinking water. It's about creating a lifestyle.
+
+ tips:
+<ul>
+<li>Use a humidifier to add moisture to the air, especially in drier climates.</li>
+<li>Apply hydrating skincare products to lock in moisture.</li>
+<li>Avoid excessive alcohol and caffeine, as they can lead to dehydration.</li>
+</ul>
+<br>
+<h3>
+Water’s Role in Our Treatments</h3>
+<br>
+
+<p>At AgeFix, we incorporate the philosophy of hydration in all our treatments.
+  We understand that well-hydrated skin
+  responds better to anti-wrinkle treatments and skin boosters,
+  leading to more effective and lasting results.
+
+Embrace the miracle of water and witness its transformative effects on your skin. Let's journey together towards radiant, hydrated, and youthful skin.
+
+</p>
+<div class = "thankyou">
+  <br>  <br>  <br>
+  <h2>Sincerely,<br>
+    AgeFix</h2>
+    <br>
+    <a href="index.html"><i class="fa-solid fa-backward"></i>    Back</a>
+  </div>
+</div>
+<script>
+  window.onscroll =function(){myFunction()};
+  var navbar = document.getElementsByClassName("nav");
+  var sticky =navbar.offsetTop;
+  function myFunction(){
+    if (window.pageYOffset >= sticky){
+      navbar.classList.add("sticky")
+    }else{
+      navbar.classList.remove("sticky")
+    }
+  }
+
+  window.addEventListener("scroll", function() {
+var dropdownContent = document.getElementById("sidemenu");
+if (dropdownContent.classList.contains('show')) {
+  dropdownContent.classList.remove("show");
+}
+});
+
+  var tablinks=document.getElementsByClassName("tab-links");
+  var tabcontents=document.getElementsByClassName("tab-contents");
+  function opentab(tabname) {
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+    }
+var sidemenu = document.getElementById("sidemenu");
+function openmenu (){
+  sidemenu.style.right ="0px";
+}
+function closemenu (){
+  sidemenu.style.right ="-200px";
+}
+var dropdown = document.querySelector(".dropdown");
+dropdown.addEventListener("mouseenter", function () {
+  document.getElementById("myDropdown").classList.add("show");
+});
+
+dropdown.addEventListener("mouseleave", function () {
+  document.getElementById("myDropdown").classList.remove("show");
+});
+
+</script>
+<iframe  id = "footershow"src="footer.html" width="100%" frameborder="0" scrolling="no"></iframe>
+</body>
+</html>

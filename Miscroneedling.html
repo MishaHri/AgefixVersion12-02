@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href ="style.css">
+  <script src="https://kit.fontawesome.com/1f6873ff8c.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <style>
+
+
+#header{
+      position: relative;
+      width: 100%;
+      height: 650px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 1; /* Ensure a proper z-index */
+    }
+
+    #header img {
+width: 100%;
+height: 100%;
+object-fit:cover
+    }
+
+    .header-text {
+      position: absolute;
+      text-align: center;
+      top: 70%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      background:rgba(252, 251, 251, 0.5);
+      z-index: 2; /* Set a higher z-index to appear over the header */
+    }
+
+#tretment-sumary{
+  padding: 20px;
+  background-color: white;
+  color:#ad8528;
+  text-align: center;
+  border-radius: 12px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border:solid 1px #F5F5F5;
+}
+
+
+
+.column-tretment{
+border-radius: 10px;
+border:3px solid #ad8528;
+padding:30px;
+}
+
+
+.benefits ul{
+  display: inline-block;
+  color: #ad8528;
+}
+
+
+.booknow{
+color: #ad8528;
+text-align: center;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.booknow a{
+color: #ad8528;
+text-decoration: none;
+}
+
+.booknow a:hover{
+  transform: scale(1.1);
+}
+.dropdown-container {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+    }
+
+    .dropdown {
+      position: relative;
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: center;
+      /* border: 1px solid grey; */
+      border-radius: 40px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0 8px 16px rgba(182, 126, 126, 0.2);
+      z-index: 1;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      padding: 20px;
+      margin-top: 0px;
+    }
+
+    .dropdown-item {
+      cursor: pointer;
+      margin-top: 0px;
+      padding: 6px;
+      background-color: white;
+    }
+
+.container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+
+.column {
+  float: center;
+  width: 50%;
+  padding: 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+    .table-container {
+      margin: 40px;
+      object-fit: center;
+    }
+
+    .table-container h2{
+     object-fit: center;
+      color: #a67814;
+      padding: 20px;
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      border: 1px solid  #F5F5F5;
+
+    }
+
+    th, td {
+      padding: 30px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    td {
+      border-left: 1px solid #F5F5F5;
+    }
+
+    th {
+      background-color: #AD8527;
+      color:  white;
+      border-left: 1px solid white;
+    }
+
+    tr:nth-child(even) {
+      background-color: whitesmoke;
+    }
+
+    tr:nth-child(odd) {
+      background-color: white;
+    }
+
+.tretment-box{
+  padding: 10px;
+}
+
+
+select {
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    .priceinfo{
+      text-align:center;
+    }
+
+@media only screen and (max-width:600px){
+
+
+.column-tretment{
+padding:10px;
+}
+
+#tretment-sumary {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .column-tretment {
+    padding: 10px;
+  }
+
+  .table-container  h2{
+margin-left: 10px;
+      font-size: 25px;
+    }
+
+    .column {
+  float: center;
+  width: 100%;
+}
+
+}
+
+    </style>
+</head>
+<body>
+  <nav>
+    <div class = "logo">
+    <a href="index.html"><img src="images/logotransparency.png" class ='logo'></a>
+    </div>
+    <div class = "menu">
+    <ul id = "sidemenu">
+      <li><a href="index.html">Home</a></li>
+      <!-- <div class="dropdown"> -->
+        <!-- <button onclick="myFunctionnav()" class="dropbtn">Treatments</button>
+        <div id="myDropdown" class="dropdown-content-treatments"> -->
+        <li><a href="face.html">FaceFix</a></li>
+        <li><a href="body.html">BodyFix</a><li>
+        <li><a href="hair.html">HairFix</a><li>
+      <li><a href="academy.html">Academy</a></li>
+      <li><a href="contactform.html">Contact</a></li>
+      <li><a href="pricelist.html">Price List</a></li>
+      <li><a href = "booking.html" class = "btnnav">Book</a></li>
+      <br>
+      <br>
+      <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+    </ul>
+    <i class="fa-solid fa-bars" onclick ="openmenu()"></i>
+   </div>
+  </nav>
+<div id ="header">
+  <img src ="images/antiwrinckle.png">
+  <div class ="header-text">
+  <h1>Microneedling </h1>
+  <h1>Treatment</h1>
+</div>
+</div>
+
+<div class = "punchline">
+  <h2>Microneedling, also known as collagen induction therapy,
+    is a minimally invasive skin rejuvenation procedure. It involves the use of a device equipped with fine needles to create tiny punctures on the top layer of the skin. This process triggers the body's natural wound healing processes, resulting in cell turnover and increased collagen and elastin production. These effects can lead to firmer, smoother, and more toned skin.
+  </h2>
+</div>
+
+
+  <div id ="tretment-sumary">
+  <h2>Treatment Sumary</h2>
+  <br>
+  <br>
+  <div class ="treatment">
+<div class = "row">
+  <div class = "column-tretment">
+    <p>Application</p>
+    <br>
+    <i class="fas fa-syringe"></i>
+  </div>
+  <div class = "column-tretment">
+    <p>Procedure <br>time</p>
+    <i class="fa-solid fa-clock"></i>
+    <p>45-90min</p>
+  </div>
+  <div class = "column-tretment">
+    <p>Recovery <br>Time</p>
+    <i class="fa-regular fa-clock"></i>
+    <br>
+    <p>24-48hours</p>
+  </div>
+  <div class = "column-tretment">
+    <p>Discomfort <br> Level</p>
+    <i class="fa-solid fa-face-smile"></i>
+    <br>
+    <p>Mild to moderate</p>
+  </div>
+  </div>
+  <div class = "benefits">
+    <br>
+  <h3>Benefits</h3>
+  <ul style="list-style-type:square">
+    <li>Reduces the appearance of fine lines and wrinkles.</li>
+    <li>Improves skin texture and reduces pore size.</li>
+    <li>Helps in the reduction of scars and hyperpigmentation.</li>
+    <li>Enhances skin firmness and elasticity.</li>
+  </ul>
+  <br>
+  <div class = "booknow">
+  <a href = "booking.html">Book now a complimentary consultation</a>
+  </div>
+</div>
+</div>
+</div>
+
+<div class = "punchline">
+  <h2>Don t know what to expect?
+    <br> See bellow if you find answers to your questions
+    <br>If not, please do not sesitate to get in touch
+  </h3>
+  <a href = "contactform.html" class ="btnnav">Get in touch</a>
+
+</div>
+
+ <div class="dropdown-container">
+  <div class="dropdown" id="dropdown1">
+    <div class="dropdown-item"><h3>Pre-Treatment Advice:<i class="fa-solid fa-angles-down"></i></h3></div>    <div class="dropdown-content">
+     <br>
+      <div><ul>
+        <li>Avoid using topical products that contain tretinoin, retinol, retinoids, glycolic acid, or any "anti-aging" products (1-2 weeks before and after )</li>
+        <li>Refrain from consuming alcohol, coffee or using blood thinners such as Ibuprofen/Ginkgo Biloba/St John’s Wort for 24hours prior to the  treatment.</li>
+        <li>Avoid sun exposure and tanning treatments for a week prior.</li>
+        <li>Do not use retinoids or products containing acids for 48 hours before the procedure.</li>
+        <li>Ensure the skin is clean and free of any makeup or lotions on the day of treatment.</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="dropdown" id="dropdown2">
+    <div class="dropdown-item"><h3>Post-Treatment Care<i class="fa-solid fa-angles-down"></i></h3></div>    <div class="dropdown-content">
+      <br>
+      <div><ul>
+        <li>Use gentle, non-irritating skin care products.</li>
+        <li>Avoid direct sun exposure and apply sunscreen regularly.</li>
+        <li>Stay hydrated and avoid strenuous exercise for a couple of days.</li>
+        <li>Do not use makeup for at least 24 hours after the treatment.</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="dropdown" id="dropdown3">
+    <div class="dropdown-item"><h3>Results<i class="fa-solid fa-angles-down"></i></h3></div>    <div class="dropdown-content">
+      <div><ul>
+        <li>Visible improvements in skin texture and appearance can be seen after a few weeks.</li>
+        <li>For best results, a series of treatments spaced 4-6 weeks apart is typically recommended.</li>
+        <li>The skin continues to improve over several months as collagen production increases.</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+<br><br>
+  <div class="dropdown" id="dropdown4">
+    <div class="dropdown-item"><h3>Teatment Sumary<i class="fa-solid fa-angles-down"></i></h3></div>    <div class="dropdown-content">
+      <div><ul>
+        <p>What it is:
+          <br>Microneedling, also known as collagen induction
+          therapy,
+          is a cosmetic procedure that involves creating
+          tiny punctures in the top layer of the skin using fine needles. This process triggers the body's natural wound healing processes, resulting in cell turnover and increased collagen and elastin production.
+         <br> How it Works:
+         <br>The fine needles used in microneedling
+         create controlled micro-injuries to the skin,
+          which in turn stimulates the body's natural wound healing mechanisms.
+          This response promotes the production of collagen and elastin, essential proteins for maintaining skin's firmness and elasticity.
+          <br>Is it Safe? <br>Microneedling is generally safe when done by a trained professional.
+          It is suitable for most skin types. However, individuals with certain skin conditions or those who are pregnant should consult with a healthcare provider before undergoing the procedure.<br>
+        </p>
+    </div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class = "punchline">
+  <h2>Price <br>
+    Microneedling with HA and Peptides
+    £249</h2>
+  <br>
+</div>
+
+<div class ="priceinfo">
+    <br>
+<p>Prices subject to change due to quantity of serum used</p>
+<p>*See Terms & conditions for more details</p>
+</div>
+
+
+<div class = "booknow">
+  <h3>Book now a complimentary consultation<h3>
+  <div class = "btnnav"><a href = "booking.html">Book now</a>
+</div>
+
+<script>
+  window.onscroll =function(){myFunctionnav()};
+  var navbar = document.getElementsByClassName("nav");
+  var sticky =navbar.offsetTop;
+  function myFunction(){
+    if (window.pageYOffset >= sticky){
+      navbar.classList.add("sticky")
+    }else{
+      navbar.classList.remove("sticky")
+    }
+  }
+
+  window.addEventListener("scroll", function() {
+var dropdownContent = document.getElementById("sidemenu");
+if (dropdownContent.classList.contains('show')) {
+  dropdownContent.classList.remove("show");
+}
+});
+
+  var tablinks=document.getElementsByClassName("tab-links");
+  var tabcontents=document.getElementsByClassName("tab-contents");
+  function opentab(tabname) {
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+    }
+var sidemenu = document.getElementById("sidemenu");
+function openmenu (){
+  sidemenu.style.right ="0px";
+}
+function closemenu (){
+  sidemenu.style.right ="-200px";
+}
+var dropdown = document.querySelector(".dropdown");
+dropdown.addEventListener("mouseenter", function () {
+  document.getElementById("myDropdown").classList.add("show");
+});
+
+dropdown.addEventListener("mouseleave", function () {
+  document.getElementById("myDropdown").classList.remove("show");
+});
+
+</script>
+
+
+<script>
+  document.addEventListener('click', function (event) {
+    // Close all dropdowns if clicked outside
+    if (!event.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown-content').forEach(function (dropdownContent) {
+        dropdownContent.style.display = 'none';
+      });
+    }
+  });
+
+  document.querySelectorAll('.dropdown').forEach(function (dropdown) {
+    dropdown.addEventListener('mouseenter', function () {
+      // Adjust the position of the next dropdown
+      const nextDropdown = this.nextElementSibling;
+      if (nextDropdown) {
+        nextDropdown.style.marginTop = this.offsetHeight + 'px';
+      }
+    });
+
+    dropdown.addEventListener('mouseleave', function () {
+      // Reset the position of the next dropdown
+      const nextDropdown = this.nextElementSibling;
+      if (nextDropdown) {
+        nextDropdown.style.marginTop = '0';
+      }
+    });
+  });
+</script>
+
+
+
+
+
+        <iframe  id = "footershow"src="footer.html" width="100%" frameborder="0" scrolling="no"></iframe>
+</body>
+</html>

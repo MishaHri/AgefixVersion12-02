@@ -1,0 +1,586 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Treatments</title>
+    <link rel="stylesheet" href ="style.css">
+    <script src="https://kit.fontawesome.com/1f6873ff8c.js"
+    crossorigin="anonymous"></script>
+    <link href="https://fonts.cdnfonts.com/css/futura-medium" rel="stylesheet">
+    <style>
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Futura-Light,sans-serif;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+body{
+  background-color:rgb(240, 234, 225);
+  color:#333333;
+}
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+            clear: both;
+            overflow: hidden;
+            align-items: center;
+            padding: 5px;
+        }
+
+        #header{
+      position: relative;
+      width: 100%;
+      height: 650px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 1; /* Ensure a proper z-index */
+    }
+
+    #header img {
+width: 100%;
+height: 100%;
+object-fit:cover
+    }
+
+    .header-text {
+      position: absolute;
+      text-align: center;
+      top: 70%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      background:rgba(252, 251, 251, 0.5);
+      z-index: 2; /* Set a higher z-index to appear over the header */
+    }
+
+        .column {
+            box-sizing: border-box;
+            padding: 10px;
+            flex: 1; /* Equal width columns, adjust as needed */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .column h1,h2 {
+            color: #a67814;
+        }
+
+        .column p {
+            color: black;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .column a {
+            color: #a67814;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .column a:hover {
+            color: #543f0e;
+            font-size: 25px;
+            text-decoration: none;
+        }
+
+        .column img {
+            width: 50%;
+            max-width: 100%;
+            height: auto;
+            margin: auto;
+        }
+
+        .column hr {
+            border: none;
+            width: 100px;
+            height: 2px;
+            background-color: #a67814;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        li {
+  list-style-type: none;
+}
+
+.buttonup{
+margin-left:90%;
+padding: 10px;
+}
+
+.buttonup:hover{
+  cursor: pointer;
+}
+
+
+
+.side-button {
+  /* display: none; */
+  position: fixed;
+  top: 50%;
+  left: 0;
+  background-color:white;
+  color:#a67814;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.side-button:hover {
+padding: 20px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+
+  #header{
+      height: 400px;
+    }
+s
+
+
+  .header-text{
+    background-color:transparent;
+    top: 50%;
+    left: 20%;
+
+  }
+
+  .header-text h1{
+    font-size: 40px;
+    color: #a67814;
+    text-align: center;
+    text-align: center;
+  }
+
+
+            .column hr {
+                margin-left: 10px;
+            }
+
+            .column img {
+              margin-top: 20%;
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class = "logo">
+      <a href="index.html"><img src="images/logotransparency.png" class ='logo'></a>
+      </div>
+      <div class = "menu">
+      <ul id = "sidemenu">
+        <li><a href="index.html">Home</a></li>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Treatments</button>
+          <div id="myDropdown" class="dropdown-content">
+            <li><a href="face.html">FaceFix </a></li>
+            <li><a href="body.html">BodyFix</a><li>
+            <li><a href="hair.html">HairFix</a><li>
+          </div>
+        </div>
+
+        <li><a href="academy.html">Academy</a></li>
+        <li><a href="contactform.html">Contact</a></li>
+        <li><a href="pricelist.html">Price List</a></li>
+        <li><a href = "booking.html" class = "btnnav">Book</a></li>
+        <br>
+        <br>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick ="openmenu()"></i>
+     </div>
+    </nav>
+  <div id = "header">
+    <img src = "images/facetreatments21.png">
+    <div class ="header-text">
+    <h1>FaceFix</h1>
+    </div>
+  </div>
+  </div>
+
+      <div class ="punchline">
+        <h2> Discover our diverse range of face treatments catered to individual needs,
+          promoting skin vitality and rejuvenation. A beautiful and healthy face is not just an aesthetic asset but a reflection of overall well-being. Embrace the transformative
+          journey to radiance with our expert care.</h2>
+     </div>
+     <div class="side-button" onclick="openSignupPage()"><i class="fa-solid fa-angles-left"></i></div>
+  <!-- Signup page -->
+  <div id="signup-page" class="signup-page">
+    <div class="signup-content">
+      <button onclick="closeSignupPage()"><i class="fa-solid fa-xmark"></i></button>
+      <!-- Your signup form and content go here -->
+      <div class="newsletter-container">
+        <br> <h3>Subscribe to our news letter </h3>
+        <p>and receive 10% discount from your first treatment</p>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="d99ca4e9-37bd-4e1e-b6b7-cdb36bfd3b0c">
+      <form action="#" method="post" class="newsletter-form">
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <button type ="submit" class ="btnnav">Subscribe</button>
+      </form>
+    </div>
+    </div>
+  </div>
+<br><br>
+  <div class = "face-treatments">
+    <div class = "treatment">
+          <div class = "row">
+            <div class = "column" style="background-color:white">
+                    <h1>Anti-Wrinkle</h1>
+                    <p>Non-surgical procedure enhancing facial aesthetics
+                    by relaxing muscles, reducing wrinkles, and promoting a smoother,
+                    youthful appearance.</p>
+                    <br>
+                    <a href = "botox.html">Explore Treatment</a>
+                    <hr>
+             </div>
+            <div class = "column">
+              <div slass = container>
+                      <h2>Benefits</h2><br>
+                      <li><span>&#10003; </span>Skin Smoothing</li>
+                      <li><span>&#10003; </span>Anti-ageing</li>
+                      <li><span>&#10003; </span>Radiance</li>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class = "row">
+            <div class = "column">
+              <h2>Benefits</h2><br>
+
+
+              <li><span>&#10003; </span>Intense hydration of the skin.</li>
+              <li><span>&#10003; </span>Improvement in skin tone and texture.</li>
+              <li><span>&#10003; </span>Reduction in fine lines and wrinkles.</li>
+              <li><span>&#10003; </span>Promotes a radiant and youthful skin appearance.</li>
+             </div>
+            <div class = "column" style="background-color:white">
+               <h1>Mesotherapy HA (Hyaluronic Acid)</h1>
+               <br />
+               <p> Mesotherapy HA is a cosmetic treatment involving micro-injections of hyaluronic acid into the mesoderm (middle layer of the skin). It's designed to hydrate, rejuvenate, and nourish the skin.</p>
+              <br>
+              <a href = "Mesatherapy.html">Explore Treatment</a>
+              <hr>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class = "row">
+            <div class = "column"style="background-color:white">
+              <h1>Microneedling</h1>
+              <br>
+              <p>Also known as collagen induction therapy, is a cosmetic procedure that involves creating tiny punctures in the top layer of the skin using fine needles. This process triggers the body's natural wound healing processes, resulting in cell turnover and increased collagen and elastin production.</p>
+              <br>
+              <br>
+              <a href = "Miscroneedling.html">Explore Treatment</a>
+              <hr>
+            </div>
+            <div class = "column">
+              <h2>Benefits</h2><br>
+
+
+              <li><span>&#10003; </span>Reduces the appearance of fine lines and wrinkles.</li>
+              <li><span>&#10003; </span>Improves skin texture and reduces pore size.</li>
+              <li><span>&#10003; </span>Helps in the reduction of scars and hyperpigmentation.</li>
+              <li><span>&#10003; </span>Enhances skin firmness and elasticity.</li>
+             </div>
+          </div>
+        <div class = "buttonup">
+          <a href="#header"><i class="fa-solid fa-angles-up"></i></a>
+        </div>
+      <div class = "row">
+        <div class = "column">
+          <h2>Benefits</h2><br>
+          <li><span>&#10003; </span>Enhances volume and provides a plumping and firming effect</li>
+          <li><span>&#10003; </span>Preserves natural muscle flexibility and movement</li>
+          <li><span>&#10003; </span>Elevates and evens out skin tone</li>
+          <li><span>&#10003; </span>Rejuvenates and brings back skin radiance</li>
+          <li><span>&#10003; </span>Minimizes the appearance of lines and wrinkles</li>
+          <li><span>&#10003; </span>Intensively hydrates and nourishes the skin</li>
+         </div>
+        <div class = "column" style="background-color:white">
+          <br>
+          <h1>Profhilo &reg; </h1>
+          <h1>5 Point Face Lift</h1>
+          <br />
+          <p>At AgeFix, we're proud to introduce Profhilo&reg; — an innovative approach to skin rejuvenation that aligns perfectly with our philosophy,
+            "Where Time Meets Beauty." Profhilo&reg; is not just a treatment; it's a revolutionary way to enhance your skin's natural firmness and hydration.</p>
+          <br>
+          <a href = "Profilo.html">Explore Treatment</a>
+          <hr>
+      </div>
+      </div>
+      <br>
+      <br>
+      <div class = "row">
+        <div class = "column" style="background-color: white">
+          <h1>Seventy Hyal 2000</h1>
+          <br>
+          <p>
+Seventy Hyal 2000: High cross-linked hyaluronic acid for deep wrinkles, volume loss, and facial contouring, offering smoother injection and
+longer-lasting results.</p>
+          <br>
+          <a href = "Seventy Hyal 2000.html">Explore Treatment</a>
+          <hr>
+        </div>
+        <div class = "column">
+          <h2>Benefits</h2><br>
+          <li><span>&#10003; </span>Volume Restoration</li>
+          <li><span>&#10003; </span>Wrinkle Reduction</li>
+          <li><span>&#10003; </span>Hydration</li>
+          <li><span>&#10003; </span>Long-Lasting Results</li>
+          <li><span>&#10003; </span>Safety and Biocompatibility</li>
+         </div>
+      </div>
+      <br>
+      <br>
+      <div class = "row">
+        <div class = "column">
+          <h2>Benefits</h2><br>
+          <li><span>&#10003;</span>Optimal results typically visible after a single treatment.</li>
+          <li><span>&#10003;</span>A series of 3 treatments at 4-week intervals is recommended for enhanced effects, with biannual repeats advised.</li>
+         </div>
+        <div class = "column"style="background-color:white">
+          <br><p> Treatment:</p>
+          <h1>Lumi eyes by Dermaren</h1>
+          <br>
+          <p>Non-surgical eye area revitalization
+            with polynucleotide-rich solution derived
+            from salmon DNA, targeting dark circles,
+            lines, and lifting skin.
+          </p>
+          <br>
+          <a href = "Lumi eyes.html">Explore Treatment</a>
+          <hr>
+        </div>
+      </div>
+      <br>
+      <br>
+
+      <div class = "row">
+        <div class = "column" style ="background-color: white">
+          <h1>Lemon Bottle Fat Dissolving</h1>
+          <br>
+          <p>Lemon Bottle fat dissolving treatment is a non-invasive procedure aimed at reducing specific areas of localized fat. This method involves the injection of a specialized solution.</p>
+            <br>
+          <a href = "botox.html">Explore Treatment</a>
+          <hr>
+        </div>
+        <div class = "column">
+          <h2>Benefits</h2><br>
+
+          <li><span>&#10003;</span>Efficiently reduces localized fat deposits.</li>
+          <li><span>&#10003;</span>Non-surgical alternative to traditional liposuction.</li>
+          <li><span>&#10003;</span>Enhances body contours for a more aesthetically pleasing figure.</li>
+          <li><span>&#10003;</span>Requires minimal downtime, unlike surgical fat removal methods.</li>
+         </div>
+        </div>
+         <br>
+         <br>
+      <div class = "row">
+        <div class = "column">
+          <h2>Benefits</h2><br>
+
+          <li><span>&#10003;</span>Enhanced Collagen Production</li>
+          <li><span>&#10003;</span>Improved Skin Texture and Tone</li>
+          <li><span>&#10003;</span>Natural Healing Process</li>
+          <li><span>&#10003;</span>Minimal Downtime</li>
+          <li><span>&#10003;</span>Versatile Treatment</li>
+         </div>
+
+        <div class = "column" style ="background-color: white">
+          <h1>PRP (Platelet-Rich Plasma) Vampire facial</h1>
+          <br>
+          <p>PRP Therapy harnesses the power of your own blood to rejuvenate and heal your skin. It involves extracting a small sample of your blood, separating the platelets to create a concentrated plasma, and then re-injecting this into your skin. This plasma is rich in growth factors that stimulate natural healing and rejuvenation.</p>
+          <br>
+          <a href = "botox.html">Explore Treatment</a>
+          <hr>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class = "row">
+        <div class = "column" style ="background-color: white">
+          <h1>Bunny Lines</h1>
+          <br>
+          <p>This non-surgical approach targets the nasalis muscle, subtly relaxing it to prevent the formation of bunny lines without affecting the natural expressions of the face.</p>
+            <br>
+          <a href = "botox.html">Explore Treatment</a>
+          <hr>
+        </div>
+        <div class = "column">
+          <h2>Benefits</h2><br>
+
+          <li><span>&#10003;</span>Minimally Invasive</li>
+          <li><span>&#10003;</span>Natural-Looking Results</li>
+          <li><span>&#10003;</span>Quick Procedure</li>
+          <li><span>&#10003;</span>Preventative Potential</li>
+          <li><span>&#10003;</span>Enhanced Facial Aesthetics</li>
+
+         </div>
+      </div>
+         <br>
+         <br>
+      <div class = "row">
+        <div class = "column">
+          <h2>Benefits</h2><br>
+
+          <li><span>&#10003;</span>Noticeable lifting of the corners of the mouth</li>
+          <li><span>&#10003;</span>Reduction in the appearance of marionette lines</li>
+          <li><span>&#10003;</span>A more youthful and pleasant resting facial expression</li>
+         </div>
+
+        <div class = "column" style ="background-color: white">
+          <h1>Facial DAO Muscles (Sad Mouth)</h1>
+          <br>
+          <p>Treatment for relaxing these muscles typically involves the strategic injection of botulinum toxin (Botox) to temporarily reduce their activity. By doing so, the corners of the mouth are subtly lifted, counteracting the natural downward pull and creating a more neutral or slightly uplifted mouth position, which contributes to a more pleasant resting facial expression.</p>
+          <br>
+          <a href = "botox.html">Explore Treatment</a>
+          <hr>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class = "row">
+        <div class = "column" style ="background-color: white">
+          <h1>Pebble Chin Treatment</h1>
+          <br>
+          <p>Pebble chin, or "orange peel" chin, is characterized by a dimpled or bumpy appearance of the chin skin, often more noticeable when the muscles are tensed. Treatment typically involves the use of botulinum toxin (Botox) injections directly into the mentalis muscle, which controls the chin area.</p>
+            <br>
+          <a href = "botox.html">Explore Treatment</a>
+          <hr>
+        </div>
+        <div class = "column">
+          <h2>Benefits</h2><br>
+
+          <li><span>&#10003;</span>Smoother Chin Texture</li>
+          <li><span>&#10003;</span>Minimally Invasive</li>
+          <li><span>&#10003;</span>Quick Procedure</li>
+          <li><span>&#10003;</span>Enhances Facial Harmony</li>
+          <li><span>&#10003;</span>Temporary and Safe</li>
+
+         </div>
+      </div>
+         <br>
+         <br>
+         <div class = "row">
+          <div class = "column">
+            <h2>Benefits</h2><br>
+
+
+            <li><span>&#10003;</span>Non-Invasive</li>
+            <li><span>&#10003;</span>Aesthetic Enhancement</li>
+            <li><span>&#10003;</span>Reduces Teeth Grinding</li>
+            <li><span>&#10003;</span>Facial Pain Relief</li>
+            <li><span>&#10003;</span>Quick Procedure with Lasting Results</li>
+           </div>
+          <div class = "column"style="background-color:white">
+            <h1>Masseter Reduction - Jawline Slimming</h1>
+            <br>
+            <p>Masseter reduction, often achieved through the targeted use of botulinum toxin (Botox) injections, is a non-surgical procedure designed to slim the jawline and reduce the size of the masseter muscles. These muscles, located at the sides of the jaw, can become enlarged due to genetics, teeth grinding (bruxism), or excessive chewing, leading to a more square or masculine jawline.</p>
+            <br>
+            <a href = "botox.html">Explore Treatment</a>
+            <hr>
+          </div>
+        </div>
+        <br>
+        <br>
+   </div>
+   <div class = "buttonup">
+    <a href="#header"><i class="fa-solid fa-angles-up"></i></a>
+  </div>
+  </div>
+  <script>
+    window.onscroll =function(){myFunction()};
+    var navbar = document.getElementsByClassName("nav");
+    var sticky =navbar.offsetTop;
+    function myFunction(){
+      if (window.pageYOffset >= sticky){
+        navbar.classList.add("sticky")
+      }else{
+        navbar.classList.remove("sticky")
+      }
+    }
+
+    window.addEventListener("scroll", function() {
+  var dropdownContent = document.getElementById("sidemenu");
+  if (dropdownContent.classList.contains('show')) {
+    dropdownContent.classList.remove("show");
+  }
+});
+
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+      }
+  var sidemenu = document.getElementById("sidemenu");
+  function openmenu (){
+    sidemenu.style.right ="0px";
+  }
+  function closemenu (){
+    sidemenu.style.right ="-200px";
+  }
+  var dropdown = document.querySelector(".dropdown");
+  dropdown.addEventListener("mouseenter", function () {
+    document.getElementById("myDropdown").classList.add("show");
+  });
+
+  dropdown.addEventListener("mouseleave", function () {
+    document.getElementById("myDropdown").classList.remove("show");
+  });
+
+</script>
+     <!-- ----------------side button -------------- -->
+
+     <script>
+
+      setTimeout(function() {
+            var sideButton = document.getElementById('sideButton');
+            sideButton.style.display = 'block';
+          }, 2000);
+
+        function openSignupPage() {
+          var signupPage = document.getElementById('signup-page');
+          signupPage.style.display = 'block';
+        }
+
+        function closeSignupPage() {
+          var signupPage = document.getElementById('signup-page');
+          signupPage.style.display = 'none';
+        }
+      </script>
+  <iframe id  = "footershow"src="footer.html" width="100%"frameborder="0" scrolling="no"></iframe>
+  </body>
+  </html>

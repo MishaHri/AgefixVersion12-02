@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Fix</title>
+  <link rel="stylesheet" href ="style.css">
+  <script src="https://kit.fontawesome.com/1f6873ff8c.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.cdnfonts.com/css/futura-medium" rel="stylesheet">
+
+</head>
+
+<body>
+      <nav>
+        <div class = "logo">
+        <a href="index.html"><img src="images/logotransparency.png" class ='logo'></a>
+        </div>
+        <div class = "menu">
+        <ul id = "sidemenu">
+          <li><a href="#about">About</a></li>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Treatments</button>
+            <div id="myDropdown" class="dropdown-content">
+              <li><a href="face.html">FaceFix </a></li>
+              <li><a href="body.html">BodyFix</a><li>
+              <li><a href="hair.html">HairFix</a><li>
+            </div>
+          </div>
+
+          <li><a href="academy.html">Academy</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="contactform.html">Contact</a></li>
+          <li><a href="pricelist.html">Price List</a></li>
+          <li><a href = "booking.html" class = "btnnav">Book</a></li>
+          <br>
+          <br>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick ="openmenu()"></i>
+       </div>
+      </nav>
+
+  <div id ="header">
+    <img src = "images/2.png">
+                <div class ="header-text first-page">
+                <h1>WELCOME</h1>
+<br>
+                     <h3>to AgeFix ....your heaven for rejuvenation and timeless beauty.
+                      <br> At our aesthetic sanctuary, we blend artistry with expertise to bring
+                     <br> you personalized Anti Wrinkle Injections  and Skin Booster treatments.
+                      <br> Step into a realm where your natural radiance is our priority.
+                      <br>Explore our transformative services designed to enhance your beauty and
+                      <br>elevate your confidence.
+                      <br> Trust us to unveil your timeless allure.
+                     <br> Welcome to a place where every visit is a journey to the best version of yourself.</h3>
+                      </div>
+  </div>
+
+  <div class ="header-punchline">
+    <h3>AgeFix ....your heaven for rejuvenation and timeless beauty.
+      <br> At our aesthetic sanctuary, we blend artistry with expertise to bring you personalized Anti Wrinkle Injections  and Skin Booster treatments.
+      <br> Step into a realm where your natural radiance is our priority.
+      <br> Explore our transformative services designed to enhance your beauty and elevate your confidence.
+      <br>Trust us to unveil your timeless allure.
+    <br>Welcome to a place where every visit is a journey to the best version of yourself.</h3>
+ </div>
+
+  <!-- ...........treatments................ -->
+
+    <div id = "treatments">
+            <div class ="container">
+          <h2 class="sub-title">AgeFix Treatments</h2>
+              <div class = "work-list">
+                  <div class = "work">
+                      <img src = "images/234.png">
+                        <div class = "layer">
+                          <br>
+                              <h3>FaceFix</h3>
+                              <br>
+                              <a href = "face.html">See Menu</a>
+                              <hr>
+                        </div>
+                  </div>
+                  <div class = "work">
+                    <img src = "images/15 2.png">
+                      <div class = "layer">
+                        <br>
+                            <h3>BodyFix</h3>
+                            <br>
+                            <a href = "face.html">See Menu</a>
+                            <hr>
+                      </div>
+                </div>
+                <div class = "work">
+                  <img src = "images/18.png">
+                    <div class = "layer">
+                      <br>
+                          <h3>HairFix</h3>
+                          <br>
+                          <a href = "face.html">See Menu</a>
+                          <hr>
+                    </div>
+                </div>
+              </div>
+            </div>
+    </div>
+
+    <div class="side-button" onclick="openSignupPage()"><i class="fa-solid fa-angles-left"></i></div>
+
+  <!-- Signup page -->
+  <div id="signup-page" class="signup-page">
+    <div class="signup-content">
+      <button onclick="closeSignupPage()"><i class="fa-solid fa-xmark"></i></button>
+      <!-- Your signup form and content go here -->
+      <div class="newsletter-container">
+        <br> <h3>Subscribe to our news letter </h3>
+        <p>and receive 10% discount from your first treatment</p>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="d99ca4e9-37bd-4e1e-b6b7-cdb36bfd3b0c">
+          <input type="hidden" name="10% SUBSCRIPTION">
+      <form action="#" method="post" class="newsletter-form">
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <button type ="submit" class ="btnnav">Subscribe</button>
+      </form>
+    </div>
+    </div>
+  </div>
+
+  <div class = "punchline">
+    <h2>Can t decide what treatment is the best for you?<br> <br>Book now a complimentary consultation</h2>
+    <a href = "contactform.html" class = "btnnav">Book Now</a>
+    </div>
+
+
+<!-- --------about ---------------- -->
+  <div id = "about">
+    <h2 class="sub-title">AgeFix Story</h2>
+    <br>
+        <div class= "container">
+              <div class = "row">
+                      <div class=" about-col-1">
+                        <img src = "images/profile1.jpeg">
+                      </div>
+                      <div class="about-col-2">
+                            <div class = "tab-titles">
+                                <h2 class= "tab-links active-link" onclick = "opentab('About')">About</h2>
+                                <h2 class = "tab-links" onclick = "opentab('vision')">Vision</h2>
+                                <h2 class = "tab-links" onclick = "opentab('mission')">Mission</h2>
+                                <h2 class = "tab-links" onclick = "opentab('values')">Values</h2>
+
+                            </div>
+                            <div class = "tab-contents active-tab"  id = "About">
+                           <span><h3>I am a passionate aesthetic nurse practitioner, with a solid background as a certified nurse.
+                            I've always been fascinated by skin health and this passion led me to follow my dreams and dedicate
+                            my entire focus to beauty and the science behind it.
+                           At AgeFix, I've made it my mission to help individuals feel more confident by
+                           enhancing their beauty through safe and effective anti wrinkles injections and face booster treatments.
+                           <br>My commitment is to provide specialized treatments with expertise and compassion,
+                           unlocking and maintaining the timeless beauty within each client.
+                           The name "AgeFix" embodies our core values of fixing and maintaining, aiming to bring out the best version of yourself.
+                           <br>Our logo encapsulates our philosophy: "Where time meets beauty."
+                           AgeFix is not just about injectables; we place a strong emphasis on well-being and take a holistic approach to beauty. I believe in nurturing your inner radiance alongside enhancing your external beauty.
+                           AgeFix is dedicated to unleashing your timeless beauty, helping you achieve your desired results while preserving your natural essence. Let us lead you on this transformative journey where we strive to bring out the inherent, ageless beauty within you.
+                           <br>
+                           Radiantly yours, Gabi Asofiei Founder, AgeFix. <br>AgeFix
+                           </h3></span>
+                            </div>
+                            <div class = "tab-contents" id = "vision">
+                              <span><br><h3>At Age Fix, we envision a world where individuals confidently embrace their inherent, ageless beauty.
+                                Our vision is to be a guiding light in the transformative journey of unlocking and maintaining timeless beauty,
+                                 fostering a culture where each person radiates confidence and authenticity.
+                              </h3></span>
+                            </div>
+                            <div class = "tab-contents" id = "mission">
+                                <span><h3>Our mission at Age Fix is to provide specialized Anti-Wrinkle and face booster treatments with expertise and compassion.
+                                  Rooted in a background of nursing since 2009 and driven by a profound vision, we are dedicated to enhancing natural beauty
+                                  and confidence. We strive to bring out the best version of each client, not by turning back time,
+                                  but by skillfully enhancing and maintaining their unique, natural essence. We are committed to creating a safe and welcoming
+                                  space where clients can embark on a transformative journey to discover and celebrate their timeless beauty.
+                                </h3></span>
+                            </div>
+                            <div class = "tab-contents" id = "values">
+                              <span><h3>Client-Centered Excellence:<br><br>
+                                Prioritize exceptional service, ensuring clients feel valued and respected.<br>
+                                Integrity and Ethics:<br>
+                                Our eco-friendly design is at the core of our strategy, reflecting our commitment to integrity and ethical practices.<br>
+                                Continuous Learning:<br>
+                                Embrace a culture of ongoing education and professional development to stay abreast of the latest industry trends and advancements.<br>
+                                Safety and Well-being:<br>
+                                Prioritize the safety and well-being of clients, ensuring all treatments are conducted with the utmost care.<br>
+                                Innovation:<br>
+                                Foster a culture of innovation, exploring new treatments and technologies to provide cutting-edge services.<br>
+                                Transparency:<br>
+                                Maintain transparency in all interactions, from pricing to treatment procedures, to build trust with clients.<br>
+                                Empowerment:<br>
+                                Empower clients to make informed decisions about their aesthetic journeys, providing guidance and support.<br>
+                                Environmental Responsibility:<br>
+                                Implement eco-friendly practices and products whenever possible to reduce environmental impact.<br>
+                                Passion for Beauty and Wellness:<br>
+                                Cultivate a passion for enhancing natural beauty and promoting overall wellness.
+                              </h3></span>
+                          </div>
+                      </div>
+              </div>
+         </div>
+  </div>
+
+        <div class = "punchline">
+          <h2>If you are looking to adopt a more helthy life style?<br>
+            <br>We are happy to share our journey with you.
+            <br> Read our blog posts for more details.</h2>
+        </div>
+
+<!-- ----------------Blog-------------- -->
+      <div id = "blog">
+          <div class ="container">
+            <h2 class="sub-title">Skin Education & Life Style</h2>
+            <br>
+                <div class = "services-list">
+                          <div>
+                            <img src = "images/water.png">
+                                <h3>Water miracles</h3>
+                                <br>
+                                <p>Explore the transformative power of hydration in our 'Water Miracles' blog. Discover how water is the secret to glowing skin and timeless beauty with AgeFix</p>
+                                <a href = "blagone.html">Read More</a>
+                                <br>
+                          </div>
+                        <div>
+                          <img src = "images/green.png">
+                              <h3>Eat green</h3>
+                              <br>
+                              <p>Dive into 'Eat Green' with AgeFix and unlock the secrets of plant-based nourishment for radiant skin and enduring health. Green is the color of beauty.</p>
+                              <a href = "blagtwo.html">Read More</a>
+                              <br>
+                        </div>
+                       <div>
+                            <img src = "images/sustainable.png">
+                            <h3>Sustainable life style</h3>
+                            <br>
+                            <p>Embrace sustainability with AgeFix: where eco-conscious practices enhance your beauty routine, promoting healthier skin and a healthier planet. Join our journey towards a greener future</p>
+                            <a href = "bloglast.html">Read More</a>
+                            <br>
+                      </div>
+                </div>
+          </div>
+      </div>
+
+      <!-- <div class = "punchline">
+        <h2>Want to be the first to hear about our latest news and offers?
+          <br>We've got you covered:</h2>
+        </div>
+
+----------------Newsletter-------------- -->
+
+      <!-- <div class="newsletter-container">
+        <br> <h3>Subscribe to our news letter </h3>
+      <form action="#" method="post" class="newsletter-form">
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <button type ="submit" class ="btnnav">Subscribe</button>
+      </form>
+    </div> -->
+
+      <div class = "punchline">
+        <h2>If you have any question for us? <br>Do not hesitate to get in touch.</h2>
+        <a href = "contactform.html" class = "btnnav">Get in touch</a>
+      </div>
+
+<!-- ----------------Testimonials-------------- -->
+
+      <div class="testimonials-container">
+        <center>
+        <h1 class = "sub-title">Testimonials </h1>
+        </center>
+        <!-- <marquee behavior="scroll" direction="left" scrollamount="4"> -->
+          <div class="testimonial">
+            <p>"
+              Had a microneedling session at Age fix and
+              I'm absolutely amazed by the results! The clinic has a welcoming and professional
+               atmosphere, making me feel at ease right from the start. Gabi is truly an expert
+               in her field, explaining each step of the process with great detail and care.
+               The treatment was comfortable, and I was particularly impressed with the
+               hygiene and safety measures in place. Just a few days post-treatment,
+              my skin already feels rejuvenated, with a noticeable improvement."</p>
+            <p class="author">Meggie 22.01.2024</p>
+          </div>
+          <div class="testimonial">
+            <p>"
+              I recently had the pleasure of experiencing a facial treatment at Age Fix and
+              I must say, it was absolutely fantastic. From the moment I walked in,
+              I was greeted by friendly staff and made to feel very welcome.
+               The atmosphere was calming and the facility was clean and inviting.
+               The aesthetician who performed my facial (Gabi)was knowledgeable and attentive.
+               She took the time to assess my skin and discuss my concerns before customizing a t
+              reatment plan for me. I felt like she genuinely cared"</p>
+            <p class="author">Thais 21.01.2024</p>
+          </div>
+          <div class="testimonial">
+            <p>"Gabi is very professional and has a kind and lovely energy.
+              She is very patient and pays attention to detail to understand
+              my needs and customise my treatment. She is always checking after
+              the treatment to make sure I am happy with the results.
+              I highly recommend Gabi, she is the best!"</p>
+            <p class="author">Evelyn 15.01.2024</p>
+        </div>
+      </div>
+
+      <div class = "punchline-academy">
+        <h2>AgeFix Academy</h2>
+        <br>
+        <p>*Next availeble session starting August 2024</p>
+        <a href = "academy.html" class = "btn">Enroll Now</a>
+      </div>
+
+
+  <iframe  id = "footershow"src="footer.html" width="100%" frameborder="0" scrolling="no"></iframe>
+
+      <!-- ----------------nav-------------- -->
+  <script>
+    window.onscroll =function(){myFunction()};
+    var navbar = document.getElementsByClassName("nav");
+    var sticky =navbar.offsetTop;
+    function myFunction(){
+      if (window.pageYOffset >= sticky){
+        navbar.classList.add("sticky")
+      }else{
+        navbar.classList.remove("sticky")
+      }
+    }
+
+    window.addEventListener("scroll", function() {
+  var dropdownContent = document.getElementById("sidemenu");
+  if (dropdownContent.classList.contains('show')) {
+    dropdownContent.classList.remove("show");
+  }
+});
+
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+      }
+  var sidemenu = document.getElementById("sidemenu");
+  function openmenu (){
+    sidemenu.style.right ="0px";
+  }
+  function closemenu (){
+    sidemenu.style.right ="-200px";
+  }
+  var dropdown = document.querySelector(".dropdown");
+  dropdown.addEventListener("mouseenter", function () {
+    document.getElementById("myDropdown").classList.add("show");
+  });
+
+  dropdown.addEventListener("mouseleave", function () {
+    document.getElementById("myDropdown").classList.remove("show");
+  });
+
+</script>
+
+     <!-- ----------------side button -------------- -->
+
+<script>
+
+setTimeout(function() {
+      var sideButton = document.getElementById('sideButton');
+      sideButton.style.display = 'block';
+    }, 2000);
+
+  function openSignupPage() {
+    var signupPage = document.getElementById('signup-page');
+    signupPage.style.display = 'block';
+  }
+
+  function closeSignupPage() {
+    var signupPage = document.getElementById('signup-page');
+    signupPage.style.display = 'none';
+  }
+</script>
+</body>
+
+</html>
