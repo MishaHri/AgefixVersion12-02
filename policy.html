@@ -37,6 +37,7 @@ opacity: 90%;
 border: white;
 text-decoration: none;
 padding: 40px;
+margin-top: 239px;
 }
 
 .policy a{
@@ -74,7 +75,33 @@ h1,h2,h3{
 </style>
 </head>
 <body>
-  <a href="index.html"><img src="images/logotransparency.png" class ='logo'></a>
+  <nav>
+    <div class = "logo">
+    <a href="index.html"><img src="images/logotransparency.png" class ='logo'></a>
+    </div>
+    <div class = "menu">
+    <ul id = "sidemenu">
+      <li><a href="index.html">Home</a></li>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Treatments</button>
+        <div id="myDropdown" class="dropdown-content">
+          <li><a href="face.html">FaceFix </a></li>
+          <li><a href="body.html">BodyFix</a><li>
+          <li><a href="hair.html">HairFix</a><li>
+        </div>
+      </div>
+
+      <li><a href="academy.html">Academy</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="contactform.html">Contact</a></li>
+      <li><a href = "booking.html" class = "btnnav">Book</a></li>
+      <br>
+      <br>
+      <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+    </ul>
+    <i class="fa-solid fa-bars" onclick ="openmenu()"></i>
+   </div>
+  </nav>
   <div class ="policy">
     <div class = "policy-text">
       <a href="index.html"><i class="fa-solid fa-backward"></i>   Back</a>
@@ -102,28 +129,33 @@ h1,h2,h3{
      <p>Clients may unsubscribe from our mailing list at any time.</p>
      <br>
      <h3> Booking Fee</h3>
-      <p>A £50 non-refundable booking fee is required, which will be
+      <p>A £49 non-refundable booking fee is required, which will be
         credited toward your treatment cost.</p>
         <br>
      <h3> Late Arrival Policy</h3>
       <p>Clients over 10 minutes late risk treatment refusal and loss of the booking fee.</p>
-      <br><br>
+      <br>
       <h3>Medical Fitness</h3>
       <p>We reserve the right to postpone or decline treatments for medically unfit clients.</p>
-
+      <br>
       <h3>Cancellation Policy</h3>
       <p>A 48-hour notice is required for cancellations to avoid losing the booking fee.</p>
       <br>
       <h3>Rescheduling</h3>
-      <p>Appointments can be rescheduled up to 7 days in advance without losing the booking fee.
-      Booking Transfer: Bookings and fees are non-transferable to other individuals.</p>
+      <p>Appointments can be rescheduled up to 7 days in advance without losing the booking fee.</p>
+      <br>
+      <h3>Booking Transfer:</h3> 
+      <p>Bookings and fees are non-transferable to other individuals.</p>
       <br>
       <h3>Children Policy</h3>
       <p>Children under 18 are not permitted on the premises.</p>
       <br>
+      <h3>Pet Policy</h3>
+      <p>Pets (with the exception of service animals) are not permitted on the premises.</p>
+      <br>
       <h3>Payment</h3>
        <p>Full payment is expected at the time of treatment.
-        Accepted methods include cash and major debit/credit cards, except International Cards.</p>
+        Accepted methods include cash and major debit / credit cards (including Amex), except International Cards.</p>
         <br>
      <h3> Refunds</h3>
       <p>Treatments and packages are non-refundable and non-transferable.</p>
@@ -159,38 +191,107 @@ h1,h2,h3{
       <p>Those with eczema, psoriasis, rashes, blisters,
         healing disorders, uncontrolled hypertension, or mitral valve disorders at
         the treatment site are not suitable candidates.</p>
-      <br>h3>Epilepsy:</h3>
+      <br>
+      <h3>Epilepsy:</h3>
       <p>Individuals who have had a seizure in the past two years are advised against treatment.</p>
+      <br>
       <h3>Additional Health Conditions:</h3>
       <p>Treatment is not recommended for individuals who are pregnant, breastfeeding,
         have cancer, autoimmune diseases, active skin infections, chronic disease
         exacerbations, hemophilia, or skin inflammation in the treatment area.</p>
-      <h3>Keloid Scars:</h3> <p>Individuals with a tendency to form keloid scars
-        should not undergo treatment.</p>
-<br>
+      <br>
+        <h3>Keloid Scars:</h3> 
+      <p>Individuals with a tendency to form keloid scars should not undergo treatment.</p>
+      <br>
       <h3>DISCOUNT POLICY</h3>
       <br>
-      <p>Non-Transferable Discounts:<br> Discounts are strictly personal and cannot be transferred.</p>
-      <p>Exclusivity of Offers:<br> Offers cannot be combined with other promotions or discounts.</p>
-      <p>Application on Full-Priced Treatments:<br>  Discounts apply only to full-priced treatments.</p>
-      <p>Validity and Expiration: <br> Be aware of and adhere to the expiration dates of offers.</p>
-      <p>Reservation of Rights:<br>  AgeFix reserves the right to alter or cancel promotions at any time.</p>
+      <h4>Non-Transferable Discounts:</h4>
+      <p> Discounts are strictly personal and cannot be transferred.</p>
       <br>
-      <h3>Usage and Booking:</h3> <br> Mention discounts at the time of booking; they cannot be applied retroactively.</p>
-      <p>Consultation and Eligibility: <br> Some offers may require eligibility confirmation or a prior consultation.</p>
 
-      <p>For the latest offers, visit our website at [Insert Website URL]. Our team is available for any inquiries about our discount policy
-      or services.</p>
+      <h4>Exclusivity of Offers:</h4>
+      <p>Offers cannot be combined with other promotions or discounts.</p>
+      <br>
+
+      <h4>Application on Full-Priced Treatments:</h4>
+      <p>Discounts apply only to full-priced treatments and not on packages</p>
+      <br>
+
+      <h4>Validity and Expiration:</h4>
+      <p>Be aware of and adhere to the expiration dates of offers. To be redeemed withing 6 months from date of purchase</p>
+      <br>
+
+      <h4>Reservation of Rights:</h4>
+      <p>AgeFix reserves the right to alter or cancel promotions at any time.</p>
+      <br>
+
+    
+      <h4>Usage and Booking:</h4> 
+      <p>Mention discounts at the time of booking; they cannot be applied retroactively.</p>
+      <br> 
+
+
+      <h4>Consultation and Eligibility:</h4> 
+      <p>Some offers may require eligibility confirmation or a prior consultation.</p>
+      <br> 
+
       <br>
       <p>Thank you for choosing AgeFix. We are committed to providing you with exceptional service.</p>
   </p>
   <br>
-  <h2>Sincerely,<br>
-    AgeFix</h2>
-    <br>
+  
     <a href="index.html"><i class="fa-solid fa-backward"></i>   Back</a>
     </div>
     </div>
   <iframe  id = "footershow"src="footer.html" width="100%" frameborder="0" scrolling="no"></iframe>
+
+  <script>
+    window.onscroll =function(){myFunctionnav()};
+    var navbar = document.getElementsByClassName("nav");
+    var sticky =navbar.offsetTop;
+    function myFunction(){
+      if (window.pageYOffset >= sticky){
+        navbar.classList.add("sticky")
+      }else{
+        navbar.classList.remove("sticky")
+      }
+    }
+  
+    window.addEventListener("scroll", function() {
+  var dropdownContent = document.getElementById("sidemenu");
+  if (dropdownContent.classList.contains('show')) {
+    dropdownContent.classList.remove("show");
+  }
+  });
+  
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+      }
+  var sidemenu = document.getElementById("sidemenu");
+  function openmenu (){
+    sidemenu.style.right ="0px";
+  }
+  function closemenu (){
+    sidemenu.style.right ="-200px";
+  }
+  var dropdown = document.querySelector(".dropdown");
+  dropdown.addEventListener("mouseenter", function () {
+    document.getElementById("myDropdown").classList.add("show");
+  });
+  
+  dropdown.addEventListener("mouseleave", function () {
+    document.getElementById("myDropdown").classList.remove("show");
+  });
+  
+  </script>
 </body>
 </html>
