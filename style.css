@@ -131,7 +131,7 @@ nav ul li a:hover::after{
 .side-button {
   /* display: none; */
   position: fixed;
-  top: 50%;
+  top: 80%;
   left: 0;
   background-color:white;
   color:#a67814;
