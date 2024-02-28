@@ -131,6 +131,7 @@ nav ul li a:hover::after{
 .side-button {
   /* display: none; */
   position: fixed;
+  /* margin-top: 100px; */
   top: 80%;
   left: 0;
   background-color:white;
@@ -155,6 +156,7 @@ padding: 10px;
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 10;
 }
 
 .signup-content {
@@ -163,7 +165,7 @@ padding: 10px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  padding: 20px;
+  padding: 25px;
   width: 300px;
   text-align: center;
   border-radius: 12px;
