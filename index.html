@@ -405,6 +405,29 @@ setTimeout(function() {
     signupPage.style.display = 'none';
   }
 </script>
+
+<script>
+  // JavaScript to enable hover effect on touch devices
+  document.addEventListener("DOMContentLoaded", function() {
+    var works = document.querySelectorAll('.work');
+
+    works.forEach(function(work) {
+      var layer = work.querySelector('.layer');
+
+      work.addEventListener('mouseenter', function() {
+        layer.style.height = '100%';
+      });
+
+      work.addEventListener('mouseleave', function() {
+        layer.style.height = '0';
+      });
+
+      work.addEventListener('touchstart', function() {
+        layer.style.height = (layer.style.height === '100%' ? '0' : '100%');
+      });
+    });
+  });
+</script>
 </body>
 
 </html>
