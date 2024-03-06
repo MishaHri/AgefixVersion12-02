@@ -139,12 +139,8 @@ nav ul li a:hover::after{
   /* padding: 5px; */
   cursor: pointer;
   z-index: 6;
-  /* transform: translateY(-50%); */
 }
 
-.side-button:hover {
-padding: 10px;
-}
 
 /* Style for the signup page */
 .signup-page {
@@ -679,14 +675,14 @@ form .btn2{
 .fa-solid{
   text-decoration: none;
   color: #a67814;
-  padding: 20px;
+  padding: 10px;
 }
 
 
 
 .fa-solid:hover{
   color: #5b4208;
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 
 /* ...........css for small screen ............ */

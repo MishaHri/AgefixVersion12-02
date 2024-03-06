@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href ="style.css">
   <script src="https://kit.fontawesome.com/1f6873ff8c.js" crossorigin="anonymous"></script>
-  <title>AgeFix London | Aesthetic Practitioner in London</title>
+  <title>Document</title>
   <style>
 
 
@@ -36,7 +36,7 @@ object-fit:cover
     }
 
 #tretment-sumary{
-  padding: 20px;
+  padding: 15px;
   background-color: white;
   color:#ad8528;
   text-align: center;
@@ -49,11 +49,14 @@ object-fit:cover
 }
 
 
-
 .column-tretment{
 border-radius: 10px;
 border:3px solid #ad8528;
-padding:30px;
+float: center;
+  width: 20%;
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 
@@ -93,19 +96,37 @@ text-decoration: none;
     }
 
     .dropdown-content {
-      display: none;
-      position: relative;
-      background-color: white;
-      /* box-shadow: 0 2px 16px rgba(182, 126, 126, 0.2); */
-      z-index: 1;
-      width: 100%;
-      margin-top: 2px;
-    }
+  display: none;
+  position: relative;
+  background-color: white;
+  z-index: 2;
+  width: 100%;
+  animation: fadeIn 1s ease; /* Add animation for smoother opening */
+}
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-      padding: 20px;
-      margin-top: 0px;
+.dropdown-content + .dropdown:hover .dropdown-content {
+  margin-top: -10px; /* Adjust this value to change the push-down height */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Start animation from slightly above */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move down to original position */
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  padding: 20px;
+  margin-top: 0px;
+}
+
+    .dropdown-content ul {
+      list-style-type: none;
     }
 
     .dropdown-item {
@@ -124,8 +145,8 @@ text-decoration: none;
     }
 
     .row {
-  margin-left:-5px;
-  margin-right:-5px;
+  margin-left:-10px;
+  margin-right:-10px;
 }
 
 .column {
@@ -189,7 +210,6 @@ text-decoration: none;
   padding: 10px;
 }
 
-
 select {
       padding: 8px;
       font-size: 16px;
@@ -199,20 +219,35 @@ select {
       text-align:center;
     }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:700px){
 
-
-.column-tretment{
-padding:10px;
-}
 
 #tretment-sumary {
     margin-left: 5%;
     margin-right: 5%;
   }
-  .column-tretment {
-    padding: 10px;
-  }
+
+
+#tretment-sumary{
+  padding: 10px;
+  text-align: center;
+  border-radius: 12px;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border:solid 1px #F5F5F5;
+}
+
+.column-tretment{
+border-radius: 10px;
+border:3px solid #ad8528;
+float: center;
+  width: 25%;
+  padding: 5px;
+  text-align: center;
+  margin: 0 auto;
+}
 
   .table-container  h2{
       margin-left: 10px;
@@ -257,7 +292,7 @@ padding:10px;
   <img src ="images/antiwrinckle.png">
   <div class ="header-text">
   <h1>Anti-Wrinkle</h1>
-  <h1>Injection</h1>
+  <h1>Treatment</h1>
 </div>
 </div>
 
@@ -279,21 +314,30 @@ padding:10px;
   <div class = "column-tretment">
     <p>Application</p>
     <br>
+    <br>
     <i class="fas fa-syringe"></i>
   </div>
   <div class = "column-tretment">
     <p>Procedure <br>time</p>
+    <br>
     <i class="fa-solid fa-clock"></i>
+    <br>
+    <br>
     <p>20 min</p>
   </div>
   <div class = "column-tretment">
     <p>Recovery <br>Time</p>
+    <br>
+
     <i class="fa-regular fa-clock"></i>
     <br>
-    <p>24 Hours</p>
+    <br>
+    <br>
+    <p>5-7 days</p>
   </div>
   <div class = "column-tretment">
     <p>Discomfort <br> Level</p>
+    <br>
     <i class="fa-solid fa-face-smile"></i>
   </div>
   </div>
@@ -312,8 +356,8 @@ padding:10px;
 
 <div class = "punchline">
   <h2>
-    <br>Explore below for answers to common questions. 
-    <br>Can't find what you're looking for? 
+    <br>Explore below for answers to common questions.
+    <br>Can't find what you're looking for?
     </h2>
   <a href = "contactform.html" class ="btnnav">Get in touch</a>
 
@@ -325,8 +369,8 @@ padding:10px;
     <div class="dropdown-content">
      <br>
       <div><ul>
-        <li>Avoid using topical products that contain tretinoin, retinol, retinoids, glycolic acid, or any "anti-aging" products.</li>
-        <li>Refrain from consuming alcohol or coffee 24 hours prior to the treatment.</li>
+        <li>Avoid using topical products that contain tretinoin, retinol, retinoids, glycolic acid, or any "anti-aging" products.</li><br>
+        <li>Refrain from consuming alcohol or coffee 24 hours prior to the treatment.</li><br>
         <li>Arrive for your appointment makeup-free, if possible, to facilitate a clean and efficient treatment process.</li>
       </ul>
     </div>
@@ -336,16 +380,16 @@ padding:10px;
     <div class="dropdown-item"><h3>Post-Treatment:<i class="fa-solid fa-angles-down"style="float: right;"></i></h3></div>    <div class="dropdown-content">
       <br>
       <div><ul>
-        <li>Bruising and Swelling: Be prepared for potential bruising or swelling at the injection sites. This is a common reaction and usually subsides quickly</li>
-        <li>Stay Upright: Maintain an upright position and avoid bending over for at least 4 hours following the treatment.</li>
-        <li>Alcohol Consumption: Abstain from alcohol for 24 hours before and after your treatment to minimize bruising and swelling.</li>
-        <li>Avoid Heat: Steer clear of sun exposure, tanning beds, saunas, and hot tubs to ensure optimal healing.</li>
-        <li>Exercise: Hold off on intense physical workouts for up to 48 hours post-treatment.</li>
-        <li>Results: Timeline: Anticipate experiencing the full results: within up to 14 days after the treatment.</li>
-        <li>Communication: If you have any concerns or unusual reactions, reach out to the clinic for guidance.</li>
+        <li>Bruising and Swelling: <br>Be prepared for potential bruising or swelling at the injection sites. This is a common reaction and usually subsides quickly</li>
+        <li>Stay Upright:<br> Maintain an upright position and avoid bending over for at least 4 hours following the treatment.</li>
+        <li>Alcohol Consumption: <br>Abstain from alcohol for 24 hours before and after your treatment to minimize bruising and swelling.</li>
+        <li>Avoid Heat: <br>Steer clear of sun exposure, tanning beds, saunas, and hot tubs to ensure optimal healing.</li>
+        <li>Exercise: <br>Hold off on intense physical workouts for up to 48 hours post-treatment.</li>
+        <li>Results: <br>Timeline: Anticipate experiencing the full results: within up to 14 days after the treatment.</li>
+        <li>Communication: <br>If you have any concerns or unusual reactions, reach out to the clinic for guidance.</li>
         <li>Avoid using topical products that contain tretinoin, retinol, retinoids, glycolic acid, or any "anti-aging" products.</li>
         <li>Arnica cream may be applied to bruises, and paracetamol is recommended for any discomfort.</li>
-        <li>Follow-Up: Consider scheduling a follow-up appointment in 2 weeks for a potential top-up, if needed.</li>
+        <li>Follow-Up:<br> Consider scheduling a follow-up appointment in 2 weeks for a potential top-up, if needed.</li>
       </ul>
     </div>
     </div>
@@ -354,8 +398,8 @@ padding:10px;
     <div class="dropdown-item"><h3>Results:<i class="fa-solid fa-angles-down"style="float: right;"></i></h3></div>
      <div class="dropdown-content">
       <div><ul>
-        <li>You can expect to see results: within a few days, but it may take up to two weeks for the full effect.</li>
-        <li>The results: typically last between 3-5 months. Repeated treatments are necessary for maintaining the effects.</li>
+        <li>You can expect to see results:<br> within a few days, but it may take up to two weeks for the full effect.</li>
+        <li>The results: <br>typically last between 3-5 months. Repeated treatments are necessary for maintaining the effects.</li>
         <li>Some patients report minor bruising or swelling at the injection site, but these side effects are usually temporary.</li>
       </ul>
     </div>
@@ -367,10 +411,14 @@ padding:10px;
       <div><ul>
         <li>Allergy to botulinum toxin or any component of the formulation.
           Infection at the injection site.</li>
+          <br>
         <li>Neuromuscular disorders (e.g., myasthenia gravis, Lambert-Eaton syndrome).</li>
+        <br>
         <li>Pregnancy and breastfeeding.</li>
+        <br>
         <li>Certain medications (like aminoglycoside antibiotics) that can interact with the treatment.</li>
-        <br></br>
+        <br>
+        <br>
         <p>It's important to consult with a healthcare professional to assess individual risks and suitability before undergoing any of these treatments. Each individual's health status and medical history
           can influence the safety and effectiveness of these procedures.</p>
 
@@ -459,6 +507,7 @@ padding:10px;
 
 
 <div class ="priceinfo">
+<p>Prices subject to change due to quantity of serum used</p>
 <p>*See Terms & conditions for more details</p>
 </div>
 
