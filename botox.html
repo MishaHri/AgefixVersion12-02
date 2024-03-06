@@ -328,7 +328,7 @@ float: center;
   <div class = "column-tretment">
     <p>Recovery <br>Time</p>
     <br>
-
+    <br>
     <i class="fa-regular fa-clock"></i>
     <br>
     <br>
@@ -377,7 +377,8 @@ float: center;
     </div>
   </div>
   <div class="dropdown" id="dropdown2">
-    <div class="dropdown-item"><h3>Post-Treatment:<i class="fa-solid fa-angles-down"style="float: right;"></i></h3></div>    <div class="dropdown-content">
+    <div class="dropdown-item"><h3>Post-Treatment:<i class="fa-solid fa-angles-down"style="float: right;"></i></h3></div>
+     <div class="dropdown-content">
       <br>
       <div><ul>
         <li>Bruising and Swelling: <br>Be prepared for potential bruising or swelling at the injection sites. This is a common reaction and usually subsides quickly</li>
@@ -588,7 +589,7 @@ dropdown.addEventListener("mouseleave", function () {
       // Adjust the position of the next dropdown
       const nextDropdown = this.nextElementSibling;
       if (nextDropdown) {
-        nextDropdown.style.marginTop = this.offsetHeight + 'px';
+        nextDropdown.style.marginTop = this.offsetHeight - '10px';
       }
     });
 

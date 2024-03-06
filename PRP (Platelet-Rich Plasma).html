@@ -221,7 +221,6 @@
 
     @media only screen and (max-width:700px){
 
-
     #tretment-sumary {
         margin-left: 5%;
         margin-right: 5%;
@@ -313,7 +312,6 @@
   <div class = "column-tretment">
     <p>Application</p>
     <br>
-    <br>
     <i class="fas fa-syringe"></i>
   </div>
   <div class = "column-tretment">
@@ -325,7 +323,6 @@
     <p>Recovery <br>Time</p>
     <br>
     <i class="fa-regular fa-clock"></i>
-    <br>
     <br>
     <p>24h</p>
   </div>
@@ -644,7 +641,7 @@ dropdown.addEventListener("mouseleave", function () {
       // Adjust the position of the next dropdown
       const nextDropdown = this.nextElementSibling;
       if (nextDropdown) {
-        nextDropdown.style.marginTop = this.offsetHeight + 'px';
+        nextDropdown.style.marginTop = this.offsetHeight - '10px';
       }
     });
 

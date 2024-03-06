@@ -531,7 +531,7 @@ dropdown.addEventListener("mouseleave", function () {
       // Adjust the position of the next dropdown
       const nextDropdown = this.nextElementSibling;
       if (nextDropdown) {
-        nextDropdown.style.marginTop = this.offsetHeight + 'px';
+        nextDropdown.style.marginTop = this.offsetHeight - '10px';
       }
     });
 
