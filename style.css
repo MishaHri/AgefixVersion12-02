@@ -177,7 +177,7 @@ nav ul li a:hover::after{
   margin-top: 180px;
 }
 
-#header img{
+#header img, img{
   width: 100%;
   background-size: cover;
   background-position: center;
