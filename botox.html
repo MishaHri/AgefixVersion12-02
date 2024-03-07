@@ -102,6 +102,7 @@ text-decoration: none;
   z-index: 2;
   width: 100%;
   animation: fadeIn 1s ease; /* Add animation for smoother opening */
+margin-top: 10px;
 }
 
 .dropdown-content + .dropdown:hover .dropdown-content {
@@ -314,30 +315,20 @@ float: center;
   <div class = "column-tretment">
     <p>Application</p>
     <br>
-    <br>
     <i class="fas fa-syringe"></i>
   </div>
   <div class = "column-tretment">
     <p>Procedure <br>time</p>
-    <br>
     <i class="fa-solid fa-clock"></i>
-    <br>
-    <br>
     <p>20 min</p>
   </div>
   <div class = "column-tretment">
     <p>Recovery <br>Time</p>
-    <br>
-    <br>
     <i class="fa-regular fa-clock"></i>
-    <br>
-    <br>
-    <br>
     <p>5-7 days</p>
   </div>
   <div class = "column-tretment">
     <p>Discomfort <br> Level</p>
-    <br>
     <i class="fa-solid fa-face-smile"></i>
   </div>
   </div>
@@ -577,35 +568,39 @@ dropdown.addEventListener("mouseleave", function () {
 
 </script>
 
-
 <script>
-  document.addEventListener('click', function (event) {
-    // Close all dropdowns if clicked outside
-    if (!event.target.closest('.dropdown')) {
-      document.querySelectorAll('.dropdown-content').forEach(function (dropdownContent) {
-        dropdownContent.style.display = 'none';
+document.querySelectorAll('.dropdown-item').forEach(function (dropdownItem) {
+  dropdownItem.addEventListener('click', function () {
+    // Toggle the display of dropdown content
+    const dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === 'block') {
+      dropdownContent.style.display = 'none';
+      // Reset the margin of the next sibling when closing
+      const nextSibling = dropdownContent.nextElementSibling;
+      if (nextSibling) {
+        nextSibling.style.marginTop = '0';
+      }
+    } else {
+      // Hide all other dropdown contents
+      document.querySelectorAll('.dropdown-content').forEach(function (content) {
+        if (content !== dropdownContent) {
+          content.style.display = 'none';
+        }
       });
+      // Show the clicked dropdown content
+      dropdownContent.style.display = 'block';
+      // Adjust the margin of the next sibling to push it down
+      const nextSibling = dropdownContent.nextElementSibling;
+      if (nextSibling) {
+        nextSibling.style.marginTop = dropdownContent.offsetHeight + 'px';
+      }
     }
   });
+});
 
-  document.querySelectorAll('.dropdown').forEach(function (dropdown) {
-    dropdown.addEventListener('mouseenter', function () {
-      // Adjust the position of the next dropdown
-      const nextDropdown = this.nextElementSibling;
-      if (nextDropdown) {
-        nextDropdown.style.marginTop = this.offsetHeight - '10px';
-      }
-    });
 
-    dropdown.addEventListener('mouseleave', function () {
-      // Reset the position of the next dropdown
-      const nextDropdown = this.nextElementSibling;
-      if (nextDropdown) {
-        nextDropdown.style.marginTop = '0';
-      }
-    });
-  });
 </script>
+
 
 
 <iframe  id = "footershow"src="footer.html" width="100%" frameborder="0" scrolling="no"></iframe>

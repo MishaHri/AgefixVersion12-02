@@ -678,7 +678,30 @@ form .btn2{
   padding: 10px;
 }
 
+.fa-solid{
+  text-decoration: none;
+  color: #a67814;
+  padding: 10px;
+}
 
+.fa-regular{
+  text-decoration: none;
+  color: #a67814;
+  padding: 10px;
+}
+
+.fa-syringe{
+  text-decoration: none;
+  color: #a67814;
+  padding: 10px;
+}
+
+
+.fa-face-meh{
+  text-decoration: none;
+  color: #a67814;
+  padding: 10px;
+}
 
 .fa-solid:hover{
   color: #5b4208;
