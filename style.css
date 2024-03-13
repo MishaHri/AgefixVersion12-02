@@ -203,7 +203,6 @@ nav ul li a:hover::after{
 .header-text{
   position: absolute;
   padding: 10px;
-  background:rgba(252, 251, 251, 0);
   border-radius: 12px;
   width:fit-content;
   margin-left: 20px;
@@ -219,7 +218,7 @@ text-align: center;
 
 .header-text h3{
   font-size:20px;
-  color:white;
+  color:whitesmoke;
   text-align: center;
   background-color:rgba(195, 195, 195, 0.6);
   }
@@ -229,12 +228,14 @@ text-align: center;
 }
 
 .punchline{
-  /* color:white; */
   background-color:rgb(225, 207, 178);
+  /* background-color: #ebd4c4; */
   text-align: center;
   padding: 30px;
   border-radius:  0px 50px;
-  color:#a67814;
+  color: whitesmoke;
+  /* color:#a67814; */
+
 }
 
 .punchline-academy{
