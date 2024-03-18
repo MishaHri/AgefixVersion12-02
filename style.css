@@ -210,17 +210,29 @@ nav ul li a:hover::after{
 }
 
 
+.dropdown-item:hover{
+  background-color:rgb(230, 221, 208);
+  }
+
+
 .header-text h1{
 font-size:70px;
 color: #a67814;
 text-align: center;
+/* background:rgba(252, 251, 251, 0.5); */
+padding: 6px;
+border-radius: 12px;
 }
 
 .header-text h3{
   font-size:20px;
   color:whitesmoke;
   text-align: center;
-  background-color:rgba(195, 195, 195, 0.6);
+  background:rgba(252, 251, 251, 0.3);
+  color:rgb(170,136,92);
+  padding: 5px;
+  padding: 12px;
+
   }
 
 .header-punchline{
@@ -228,7 +240,8 @@ text-align: center;
 }
 
 .punchline{
-  background-color:rgb(225, 207, 178);
+  /* background-color:rgb(225, 207, 178); */
+  background-color:#c4ad8e;
   /* background-color: #ebd4c4; */
   text-align: center;
   padding: 30px;
@@ -757,7 +770,7 @@ height: 64vh;
   border-radius: 12px;
   width: 40%; /* Adjust as needed */
   margin-left: 5%; /* Adjust as needed */
-  top: 30%; /* Add this to keep it at the top */
+  top: 50%; /* Add this to keep it at the top */
   height: fit-content;
   width:fit-content;
   text-align: center;
@@ -770,13 +783,14 @@ display:none
   .header-punchline{
     display: block;
     color:white;
-    background-color:rgb(188,154,101);
+    /* background-color:rgb(188,154,101); */
+    background-color: #c4ad8e;
     text-align:left;
     padding: 30px;
   }
 
   .header-text h1{
-    font-size: 40px;
+    font-size: 36px;
     color: #a67814;
     text-align: center;
   }
